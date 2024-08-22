@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+.container {
+  width: 1222px;
+}
+
+.btns_default {
+  background-color: $color-primary;
+  @extend %buttons-shared;
+  color: $font-color-light;
+}
+.btns_default-ghost {
+  border: solid 2px $color-primary;
+}
+.btns_hover {
+  background-color: $color-hover;
+  color: $color-primary;
+}
+.btns-pagination_default {
+  background-color: $color-primary;
+  color: $font-color-light;
+}
+.btns-pagination_hover {
+  background-color: $color-hover;
+  color: $font-color-light;
+}
+.btns-pagination_disbled {
+  background-color: $color-disabled;
+  color: $font-color-light;
+}
+.btns-minor_default {
+  border: solid 1px $color-minor;
+  @extend %buttons-minor-shared;
+  color: $color-minor;
+}
+.btns-minor_hover {
+  background-color: $color-minor;
+  @extend %buttons-minor-shared;
+  color: $font-color-light;
+}
