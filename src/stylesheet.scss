@@ -1,7 +1,7 @@
 @import
-  'reset',
-  'variables',
-  'global',
-  'extends';
+  './blocks/reset.scss',
+  './blocks/variables.scss',
+  './global.scss',
+  './extends.scss';
   
-@import 'blocks/header', 'blocks/footer';
+@import './blocks/header.scss', './blocks/footer.scss';
