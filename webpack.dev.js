@@ -32,11 +32,19 @@ module.exports = {
           'css-loader', 
           'sass-loader'],
       },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+      },
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html'}),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'tepmlate.pug'),
+      filename: 'index.html',
+    }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
+    
   ],
   
 }
