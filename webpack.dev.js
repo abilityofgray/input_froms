@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
+        loader: '@webdiscus/pug-loader',
       },
       {
         test: /\.(ico|png|jp?g|webp|svg)$/,
@@ -49,22 +49,33 @@ module.exports = {
     ]
   },
   plugins: [
+    /*
+    new HtmlBundlerPlugin({
+      entry: {
+        // source favicon file must be specified directly in HTML using link tag
+        index: './src/index.html',
+      },
+    }),
+    */
     
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'template.pug'),
+      template: path.join(__dirname, 'src'),
       filename: 'index.html',
     }),
+    
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
+    /*
     new PugPlugin({
-      pretty: 'auto',
+      
       //☝🏽 Format HTML (only in dev mode)
       entry: {
         // Insert your PUG templates here
-        index: './src/views/index.pug',
-        about: './src/views/about.pug'
+        index: 'src/template.pug',
+        //about: './src/views/about.pug'
       },
       
     })
+    */
       
   ],
   
