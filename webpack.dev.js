@@ -3,10 +3,12 @@ const webpack = require('webpack');
 const PugPlugin = require('pug-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const loader = require('sass-loader');
 
 
 module.exports = {
+
   entry: './src/index.js',
   mode: 'development',
   output: {
@@ -47,12 +49,22 @@ module.exports = {
     ]
   },
   plugins: [
+    
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.pug'),
+      template: path.join(__dirname, 'src', 'template.pug'),
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
-    new PugPlugin(),
+    new PugPlugin({
+      pretty: 'auto',
+      //☝🏽 Format HTML (only in dev mode)
+      entry: {
+        // Insert your PUG templates here
+        index: './src/views/index.pug',
+        about: './src/views/about.pug'
+      },
+      
+    })
       
   ],
   
