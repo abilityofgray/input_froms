@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const PugPlugin = require('pug-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PugPlugin = require('PugPlugin');
 const loader = require('sass-loader');
 
 
@@ -48,24 +48,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'tepmlate.pug'),
+      template: path.join(__dirname, 'src', 'index.pug'),
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
-    new PugPlugin({
-      entry: {
-        // define many page templates here
-        index: 'src/views/index.pug', // => dist/index.html
-      },
-      js: {
-        // JS output filename
-        filename: 'js/[name].[contenthash:8].js',
-      },
-      css: {
-        // CSS output filename
-        filename: 'css/[name].[contenthash:8].css',
-      },
-    }),
+    new PugPlugin(),
+      
   ],
   
 }
