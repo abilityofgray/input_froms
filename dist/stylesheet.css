@@ -1,14 +1,14 @@
-/*!**************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheet.scss ***!
-  \**************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss ***!
+  \************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
-/*!******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheet.scss (1) ***!
-  \******************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss (1) ***!
+  \****************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
-/*!******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheet.scss (2) ***!
-  \******************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss (2) ***!
+  \****************************************************************************************************************/
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -146,3 +146,5 @@ legend {
 .btns-minor_default, .btns-minor_hover {
   border-radius: 62px;
 }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzaGVldC5jc3MiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQTtBQUNBO0VBQ0M7RUFDQTtFQUNBO0FDR0Q7O0FEQUE7OztFQUdDO0FDR0Q7O0FEQUE7QUFFQTtFQUNJO0FDRUo7O0FEQ0E7RUFDSTtBQ0VKOztBRENBO0FBRUE7RUFDQztBQ0NEOztBREVBO0VBQ0k7RUFDSDtBQ0NEOztBREVBO0VBQ0M7QUNDRDs7QURFQTtFQUNDO0FDQ0Q7O0FERUE7RUFDQztFQUNBO0FDQ0Q7O0FERUE7RUFDRTtBQ0NGOztBREVBO0FBRUE7RUFDQztFQUNHO0VBQ0E7RUFDQTtBQ0FKOztBREdBO0VBQ0M7QUNBRDs7QURHQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUNBSjs7QURHQTs7RUFFSTtBQ0FKOztBREdBO0VBQ0M7RUFDQTtBQ0FEOztBREdBO0VBQ0M7QUNBRDs7QURHQTtFQUNDO0FDQUQ7O0FDckZBO0VBQ0U7QUR3RkY7O0FDckZBO0VBQ0UseUJDUGM7RURTZCxjQ1BpQjtBRjhGbkI7O0FDckZBO0VBQ0U7QUR3RkY7O0FDdEZBO0VBQ0UseUJDZFk7RURlWixjQ2hCYztBRnlHaEI7O0FDdkZBO0VBQ0UseUJDbkJjO0VEb0JkLGNDbEJpQjtBRjRHbkI7O0FDeEZBO0VBQ0UseUJDdEJZO0VEdUJaLGNDdEJpQjtBRmlIbkI7O0FDekZBO0VBQ0UseUJDeEJlO0VEeUJmLGNDMUJpQjtBRnNIbkI7O0FDMUZBO0VBQ0U7RUFFQSxjQzdCWTtBRnlIZDs7QUMxRkE7RUFDRSx5QkNoQ1k7RURrQ1osY0NwQ2lCO0FGZ0luQjs7QUdsSUE7RUFDRTtBSHFJRjs7QUduSUE7RUFDRTtBSHNJRixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYmxvY2tzL3Jlc2V0LnNjc3MiLCJ3ZWJwYWNrOi8vLy4vc3R5bGVzaGVldC5zY3NzIiwid2VicGFjazovLy8uL2dsb2JhbC5zY3NzIiwid2VicGFjazovLy8uL2Jsb2Nrcy92YXJpYWJsZXMuc2NzcyIsIndlYnBhY2s6Ly8vLi9leHRlbmRzLnNjc3MiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

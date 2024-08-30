@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const PugPlugin = require('pug-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
@@ -8,13 +7,15 @@ const loader = require('sass-loader');
 
 
 module.exports = {
-
-  entry: './src/index.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: './index.js',
   mode: 'development',
+  devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: 'bundle.js',
   },
+  watch: true,
   module: {
     rules: [
       {
@@ -36,9 +37,9 @@ module.exports = {
           'sass-loader'],
       },
       {
-        test: /\.pug$/,
-        loader: '@webdiscus/pug-loader',
-      },
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+    },
       {
         test: /\.(ico|png|jp?g|webp|svg)$/,
         type: 'asset/resource',
@@ -49,33 +50,12 @@ module.exports = {
     ]
   },
   plugins: [
-    /*
-    new HtmlBundlerPlugin({
-      entry: {
-        // source favicon file must be specified directly in HTML using link tag
-        index: './src/index.html',
-      },
-    }),
-    */
     
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src'),
-      filename: 'index.html',
-    }),
+    
+    new HtmlWebpackPlugin(),
     
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
-    /*
-    new PugPlugin({
-      
-      //☝🏽 Format HTML (only in dev mode)
-      entry: {
-        // Insert your PUG templates here
-        index: 'src/template.pug',
-        //about: './src/views/about.pug'
-      },
-      
-    })
-    */
+   
       
   ],
   

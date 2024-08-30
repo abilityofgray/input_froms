@@ -136,7 +136,7 @@ eval("console.log('say hello from hello.js');\n\n//# sourceURL=webpack://package
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello.js */ \"./src/hello.js\");\n/* harmony import */ var _hello_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hello_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _stylesheet_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stylesheet.scss */ \"./src/stylesheet.scss\");\n\r\n\r\n\r\n  \r\n\n\n//# sourceURL=webpack://package.json/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello.js */ \"./src/hello.js\");\n/* harmony import */ var _hello_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hello_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _stylesheet_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stylesheet.scss */ \"./src/stylesheet.scss\");\n\r\n\r\n\r\n  \r\nfunction component() {\r\n  const element = document.createElement('div');\r\n\r\n  element.innerHTML = 'Hello Webpack 5';\r\n  element.classList.add('hello');\r\n\r\n  return element;\r\n  \r\n}\r\n\r\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://package.json/./src/index.js?");
 
 /***/ })
 
