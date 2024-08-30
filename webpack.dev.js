@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  watch: true,
+  //watch: true,
   module: {
     rules: [
       {
@@ -29,6 +29,15 @@ module.exports = {
           "css-loader",
           "sass-loader",
         ]
+      },
+      {
+        test: /\.twig$/,
+        use: {
+          loader: 'twig-loader',
+          options: {
+              // See options section below
+          },
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -53,7 +62,6 @@ module.exports = {
     
     
     new HtmlWebpackPlugin(),
-    
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
    
       
