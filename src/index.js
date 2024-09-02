@@ -1,22 +1,23 @@
-import Twig from 'twig'
+import template from './footer.twig';
 import './stylesheet.scss'
 
 
 function component() {
-  const element = document.createElement('div');
+  const element = document.createElement('footer');
 
-  element.innerHTML = 'Hello Webpack 5';
-  element.classList.add('hello');
+  const html = template();
+  console.log(html);
+  //document.getElementById('app').innerHTML = html;
+  element.innerHTML = html;
+  //element.classList.add('hello');
 
   return element;
 
 }
-Twig.renderFile('.index.twig', {foo:'bar'}, (err, html) => {
-  html; // compiled string
-});
-var template = require("./footer.twig");
+
+
 // => returns pre-compiled template as a function and automatically includes Twig.js to your project
  
-var html = template({title: 'dialog title'});
+
 
 document.body.appendChild(component());
