@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** ">
+</head>
+<body>
+  <header>
+    {% include "./header.twig" %}
+  </header>
+  <div>OLLOLOLOL</div>
+  <div>adasdaa</div>
+  {% block content %}
+    <div>block content</div>
+  {% endblock %}
+  {{ '22' }}
+  <div></div>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div class="content">dfsdfdddd</div>
+  
+</body>
+</html>
