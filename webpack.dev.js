@@ -13,7 +13,7 @@ module.exports = {
   mode: 'development',
   //devtool: 'inline-source-map',
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   //watch: true,
@@ -64,23 +64,24 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-    },
+      },
       {
-        test: /\.(ico|png|jp?g|webp|svg)$/,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name].[hash:8][ext][query]',
+          // keep original filenames and copy images to `dist/img/`
+          //filename: './image/[hash][ext]', 
+          filename: path.join('icons', '[name].[contenthash][ext]'),
+          //filename: 'img/[name].[hash:8][ext][query]',
         },
       },
     ]
   },
   
   plugins: [
-    new HtmlWebpackPlugin( {filename: '.dist/apl.index.html'}),
     new HtmlWebpackPlugin({ 
       template: './index.twig',
       inject: 'body'}),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
   ],
-  
 }
