@@ -1,14 +1,148 @@
 /*!************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss ***!
   \************************************************************************************************************/
-/*
-@import
-  './blocks/reset.scss',
-  './blocks/variables.scss',
-  './global.scss',
-  './extends.scss';
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss (1) ***!
+  \****************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+/*!****************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./stylesheet.scss (2) ***!
+  \****************************************************************************************************************/
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
 
-@import './blocks/header.scss', './blocks/footer.scss';
-*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzaGVldC5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7Ozs7Ozs7O0NBQUEsQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3N0eWxlc2hlZXQuc2NzcyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+.container {
+  width: 1222px;
+}
+
+.btns_default {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+.btns_default-ghost {
+  border: solid 2px #1F1F1F;
+}
+
+.btns_hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+
+.btns-pagination_default {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+.btns-pagination_hover {
+  background-color: #FBCE51;
+  color: #FFFFFF;
+}
+
+.btns-pagination_disbled {
+  background-color: #D6D6D6;
+  color: #FFFFFF;
+}
+
+.btns-minor_default {
+  border: solid 1px #3057A2;
+  color: #3057A2;
+}
+
+.btns-minor_hover {
+  background-color: #3057A2;
+  color: #FFFFFF;
+}
+
+.btns_default {
+  border-radius: 66px;
+}
+
+.btns-minor_default, .btns-minor_hover {
+  border-radius: 62px;
+}
