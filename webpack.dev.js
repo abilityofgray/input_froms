@@ -62,16 +62,16 @@ module.exports = {
       },
       
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+          test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+          type: 'asset/inline',
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
           // keep original filenames and copy images to `dist/img/`
-          //filename: './image/[hash][ext]', 
-          filename: path.join('icons', '[name].[contenthash][ext]'),
+          filename: './image/[name][ext]', 
+          //filename: path.join('icons', '[name].[contenthash][ext]'),
           //filename: 'img/[name].[hash:8][ext][query]',
         },
       },
@@ -82,6 +82,11 @@ module.exports = {
     new HtmlWebpackPlugin({ 
       template: './index.twig',
       inject: 'body'}),
+    new HtmlWebpackPlugin({
+      filename: './templates/footer.twig',
+      //template: './templates/footer.twig',
+      //hash: true,
+    }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
   ],
 }

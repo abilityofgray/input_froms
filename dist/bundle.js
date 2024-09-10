@@ -163,33 +163,23 @@ eval("// Copyright Joyent, Inc. and other Node contributors.\r\n//\r\n// Permiss
 
 /***/ }),
 
-/***/ "./footer.twig":
-/*!*********************!*\
-  !*** ./footer.twig ***!
-  \*********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [],\n    template = twig({\"id\":\"$resolved:d2f9ccfd442b425f43ae0c5a45cff0e051d150b8935fbdd99e09d3f58f6d7775515e6e97833fa7a0cd0bcf54023da43727254ef961d2029a5c44e6f30b78180b:footer.twig\",\"data\":[],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./footer.twig?");
-
-/***/ }),
-
-/***/ "./header.twig":
-/*!*********************!*\
-  !*** ./header.twig ***!
-  \*********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<div>\\r\\n  <ul>\\r\\n    <li>О Нас</li>\\r\\n    <li>Каталог</li>\\r\\n    <li>Контакты</li>\\r\\n    <li></li>\\r\\n  </ul>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\n    template = twig({\"id\":\"$resolved:a50e04916e75a24b2771a8cda9e86bc9d7bea32659e2c3927a6a230d77a9df98a092b57e8ac55ebb68e81252e5e6744c9c729392b77f04a50cf381d08a30f74e:header.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<div>\\r\\n  <ul>\\r\\n    <li>О Нас</li>\\r\\n    <li>Каталог</li>\\r\\n    <li>Контакты</li>\\r\\n    <li></li>\\r\\n  </ul>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./header.twig?");
-
-/***/ }),
-
 /***/ "./index.twig":
 /*!********************!*\
   !*** ./index.twig ***!
   \********************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! ./header.twig */ \"./header.twig\");\n\nvar twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n  <meta charset=\\\"UTF-8\\\">\\r\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n  <title>Document</title>\\r\\n  <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** \\\">\\r\\n</head>\\r\\n<body>\\r\\n  <header>\\r\\n    \",\"position\":{\"start\":0,\"end\":462}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.include\",\"only\":false,\"ignoreMissing\":false,\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"$resolved:a50e04916e75a24b2771a8cda9e86bc9d7bea32659e2c3927a6a230d77a9df98a092b57e8ac55ebb68e81252e5e6744c9c729392b77f04a50cf381d08a30f74e:header.twig\"}],\"position\":{\"start\":462,\"end\":491}},\"position\":{\"start\":462,\"end\":491}},{\"type\":\"raw\",\"value\":\"\\r\\n  </header>\\r\\n  <div>OLLOLOLOL</div>\\r\\n  <div>adasdaa</div>\\r\\n  \",\"position\":{\"start\":491,\"end\":554}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":554,\"end\":573},\"output\":[{\"type\":\"raw\",\"value\":\"\\r\\n    <div>block content</div>\\r\\n  \",\"position\":{\"start\":573,\"end\":607}}]},\"position\":{\"open\":{\"start\":554,\"end\":573},\"close\":{\"start\":607,\"end\":621}}},{\"type\":\"raw\",\"value\":\"\\r\\n  \",\"position\":{\"start\":621,\"end\":625}},{\"type\":\"output\",\"position\":{\"start\":625,\"end\":635},\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"22\",\"position\":{\"start\":625,\"end\":635}}]},{\"type\":\"raw\",\"value\":\"\\r\\n  <div></div>\\r\\n  <div id=\\\"content\\\">\",\"position\":{\"start\":635,\"end\":672}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":672,\"end\":691},\"output\":[]},\"position\":{\"open\":{\"start\":672,\"end\":691},\"close\":{\"start\":691,\"end\":705}}},{\"type\":\"raw\",\"value\":\"</div>\\r\\n  <div class=\\\"content\\\">dfsdfdddd</div>\\r\\n  <img src=\\\"./image/webpack.png\\\" alt=\\\"webpack\\\">\\r\\n  <div>AAAAAAA</div>\\r\\n</body>\\r\\n</html>\",\"position\":{\"start\":705,\"end\":705}}],\n    template = twig({\"id\":\"$resolved:81bc5b57576585df8ae9737379e6667273f48d89b7229502ea34e15f3a78fa55d829b465d645fbd9768f26663c7db1bce9c98f87b406e22c2259e72767eb4154:index.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n  <meta charset=\\\"UTF-8\\\">\\r\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n  <title>Document</title>\\r\\n  <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** \\\">\\r\\n</head>\\r\\n<body>\\r\\n  <header>\\r\\n    \",\"position\":{\"start\":0,\"end\":462}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.include\",\"only\":false,\"ignoreMissing\":false,\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"$resolved:a50e04916e75a24b2771a8cda9e86bc9d7bea32659e2c3927a6a230d77a9df98a092b57e8ac55ebb68e81252e5e6744c9c729392b77f04a50cf381d08a30f74e:header.twig\"}],\"position\":{\"start\":462,\"end\":491}},\"position\":{\"start\":462,\"end\":491}},{\"type\":\"raw\",\"value\":\"\\r\\n  </header>\\r\\n  <div>OLLOLOLOL</div>\\r\\n  <div>adasdaa</div>\\r\\n  \",\"position\":{\"start\":491,\"end\":554}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":554,\"end\":573},\"output\":[{\"type\":\"raw\",\"value\":\"\\r\\n    <div>block content</div>\\r\\n  \",\"position\":{\"start\":573,\"end\":607}}]},\"position\":{\"open\":{\"start\":554,\"end\":573},\"close\":{\"start\":607,\"end\":621}}},{\"type\":\"raw\",\"value\":\"\\r\\n  \",\"position\":{\"start\":621,\"end\":625}},{\"type\":\"output\",\"position\":{\"start\":625,\"end\":635},\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"22\",\"position\":{\"start\":625,\"end\":635}}]},{\"type\":\"raw\",\"value\":\"\\r\\n  <div></div>\\r\\n  <div id=\\\"content\\\">\",\"position\":{\"start\":635,\"end\":672}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":672,\"end\":691},\"output\":[]},\"position\":{\"open\":{\"start\":672,\"end\":691},\"close\":{\"start\":691,\"end\":705}}},{\"type\":\"raw\",\"value\":\"</div>\\r\\n  <div class=\\\"content\\\">dfsdfdddd</div>\\r\\n  <img src=\\\"./image/webpack.png\\\" alt=\\\"webpack\\\">\\r\\n  <div>AAAAAAA</div>\\r\\n</body>\\r\\n</html>\",\"position\":{\"start\":705,\"end\":705}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./index.twig?");
+eval("__webpack_require__(/*! ./templates/header.twig */ \"./templates/header.twig\");\n\nvar twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n  <meta charset=\\\"UTF-8\\\">\\r\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n  <title>Document</title>\\r\\n  <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** \\\">\\r\\n</head>\\r\\n<body>\\r\\n  <header>\\r\\n    \",\"position\":{\"start\":0,\"end\":462}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.include\",\"only\":false,\"ignoreMissing\":false,\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"$resolved:234ccb49a99775484d4ccfbad42b9d06e72376d95d6413be09b7a3228e36a69768c6b0dc6226f99efb0c436c81d95da59d4560722a2924a1ec960cd996774b7a:header.twig\"}],\"position\":{\"start\":462,\"end\":501}},\"position\":{\"start\":462,\"end\":501}},{\"type\":\"raw\",\"value\":\"\\r\\n  </header>\\r\\n  <div>OLLOLOLOL</div>\\r\\n  <div>adasdaa</div>\\r\\n  \",\"position\":{\"start\":501,\"end\":564}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":564,\"end\":583},\"output\":[{\"type\":\"raw\",\"value\":\"\\r\\n    <div>block content</div>\\r\\n  \",\"position\":{\"start\":583,\"end\":617}}]},\"position\":{\"open\":{\"start\":564,\"end\":583},\"close\":{\"start\":617,\"end\":631}}},{\"type\":\"raw\",\"value\":\"\\r\\n  \",\"position\":{\"start\":631,\"end\":635}},{\"type\":\"output\",\"position\":{\"start\":635,\"end\":645},\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"22\",\"position\":{\"start\":635,\"end\":645}}]},{\"type\":\"raw\",\"value\":\"\\r\\n  <div></div>\\r\\n  <div id=\\\"content\\\">\",\"position\":{\"start\":645,\"end\":682}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":682,\"end\":701},\"output\":[]},\"position\":{\"open\":{\"start\":682,\"end\":701},\"close\":{\"start\":701,\"end\":715}}},{\"type\":\"raw\",\"value\":\"</div>\\r\\n  <div class=\\\"content\\\">dfsdfdddd</div>\\r\\n  <img src=\\\"./image/webpack.png\\\" alt=\\\"webpack\\\">\\r\\n  <div>AAAAAAA</div>\\r\\n</body>\\r\\n</html>\",\"position\":{\"start\":715,\"end\":715}}],\n    template = twig({\"id\":\"$resolved:81bc5b57576585df8ae9737379e6667273f48d89b7229502ea34e15f3a78fa55d829b465d645fbd9768f26663c7db1bce9c98f87b406e22c2259e72767eb4154:index.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n  <meta charset=\\\"UTF-8\\\">\\r\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n  <title>Document</title>\\r\\n  <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** \\\">\\r\\n</head>\\r\\n<body>\\r\\n  <header>\\r\\n    \",\"position\":{\"start\":0,\"end\":462}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.include\",\"only\":false,\"ignoreMissing\":false,\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"$resolved:234ccb49a99775484d4ccfbad42b9d06e72376d95d6413be09b7a3228e36a69768c6b0dc6226f99efb0c436c81d95da59d4560722a2924a1ec960cd996774b7a:header.twig\"}],\"position\":{\"start\":462,\"end\":501}},\"position\":{\"start\":462,\"end\":501}},{\"type\":\"raw\",\"value\":\"\\r\\n  </header>\\r\\n  <div>OLLOLOLOL</div>\\r\\n  <div>adasdaa</div>\\r\\n  \",\"position\":{\"start\":501,\"end\":564}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":564,\"end\":583},\"output\":[{\"type\":\"raw\",\"value\":\"\\r\\n    <div>block content</div>\\r\\n  \",\"position\":{\"start\":583,\"end\":617}}]},\"position\":{\"open\":{\"start\":564,\"end\":583},\"close\":{\"start\":617,\"end\":631}}},{\"type\":\"raw\",\"value\":\"\\r\\n  \",\"position\":{\"start\":631,\"end\":635}},{\"type\":\"output\",\"position\":{\"start\":635,\"end\":645},\"stack\":[{\"type\":\"Twig.expression.type.string\",\"value\":\"22\",\"position\":{\"start\":635,\"end\":645}}]},{\"type\":\"raw\",\"value\":\"\\r\\n  <div></div>\\r\\n  <div id=\\\"content\\\">\",\"position\":{\"start\":645,\"end\":682}},{\"type\":\"logic\",\"token\":{\"type\":\"Twig.logic.type.block\",\"blockName\":\"content\",\"position\":{\"start\":682,\"end\":701},\"output\":[]},\"position\":{\"open\":{\"start\":682,\"end\":701},\"close\":{\"start\":701,\"end\":715}}},{\"type\":\"raw\",\"value\":\"</div>\\r\\n  <div class=\\\"content\\\">dfsdfdddd</div>\\r\\n  <img src=\\\"./image/webpack.png\\\" alt=\\\"webpack\\\">\\r\\n  <div>AAAAAAA</div>\\r\\n</body>\\r\\n</html>\",\"position\":{\"start\":715,\"end\":715}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./index.twig?");
+
+/***/ }),
+
+/***/ "./templates/header.twig":
+/*!*******************************!*\
+  !*** ./templates/header.twig ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<div>\\r\\n  <ul>\\r\\n    <li>О Нас</li>\\r\\n    <li>Каталог</li>\\r\\n    <li>Контакты</li>\\r\\n    <li></li>\\r\\n  </ul>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\n    template = twig({\"id\":\"$resolved:234ccb49a99775484d4ccfbad42b9d06e72376d95d6413be09b7a3228e36a69768c6b0dc6226f99efb0c436c81d95da59d4560722a2924a1ec960cd996774b7a:header.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<div>\\r\\n  <ul>\\r\\n    <li>О Нас</li>\\r\\n    <li>Каталог</li>\\r\\n    <li>Контакты</li>\\r\\n    <li></li>\\r\\n  </ul>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./templates/header.twig?");
 
 /***/ }),
 
@@ -403,6 +393,16 @@ eval("// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission 
 
 /***/ }),
 
+/***/ "./image sync \\.(png%7Cjpe?g%7Csvg)$":
+/*!*********************************************************!*\
+  !*** ./image/ sync nonrecursive \.(png%7Cjpe?g%7Csvg)$ ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./Mask group (1).png\": \"./image/Mask group (1).png\",\n\t\"./Mask group (2).png\": \"./image/Mask group (2).png\",\n\t\"./webpack.png\": \"./image/webpack.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./image sync \\\\.(png%7Cjpe?g%7Csvg)$\";\n\n//# sourceURL=webpack:///./image/_sync_nonrecursive_\\.(png%257Cjpe?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
@@ -410,7 +410,40 @@ eval("// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission 
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _footer_twig__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.twig */ \"./footer.twig\");\n/* harmony import */ var _footer_twig__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footer_twig__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _stylesheet_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stylesheet.scss */ \"./stylesheet.scss\");\n/* harmony import */ var _index_twig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.twig */ \"./index.twig\");\n/* harmony import */ var _index_twig__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_twig__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _stylesheet_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stylesheet.scss */ \"./stylesheet.scss\");\n/* harmony import */ var _index_twig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.twig */ \"./index.twig\");\n/* harmony import */ var _index_twig__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_twig__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n\r\n//import './image/*.png';\r\n\r\n\r\n//batch import resourse\r\nfunction importAll(r) {\r\n  return r.keys().map(r);\r\n}\r\n\r\nconst images = importAll(__webpack_require__(\"./image sync \\\\.(png%7Cjpe?g%7Csvg)$\"));\r\n//const twigTepmlates = importAll(require.context('./templates', false, /\\.twig$/));\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./image/Mask group (1).png":
+/*!**********************************!*\
+  !*** ./image/Mask group (1).png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/Mask group (1).png\";\n\n//# sourceURL=webpack:///./image/Mask_group_(1).png?");
+
+/***/ }),
+
+/***/ "./image/Mask group (2).png":
+/*!**********************************!*\
+  !*** ./image/Mask group (2).png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/Mask group (2).png\";\n\n//# sourceURL=webpack:///./image/Mask_group_(2).png?");
+
+/***/ }),
+
+/***/ "./image/webpack.png":
+/*!***************************!*\
+  !*** ./image/webpack.png ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/webpack.png\";\n\n//# sourceURL=webpack:///./image/webpack.png?");
 
 /***/ }),
 
@@ -501,6 +534,29 @@ eval("/* (ignored) */\n\n//# sourceURL=webpack:///fs_(ignored)?");
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
