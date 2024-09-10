@@ -1,6 +1,7 @@
 
 import './stylesheet.scss'
 import './index.twig'
+import './svg/icon.svg'
 
 //import './image/*.png';
 
@@ -11,4 +12,4 @@ function importAll(r) {
 }
 
 const images = importAll(require.context('./image', false, /\.(png|jpe?g|svg)$/));
-//const twigTepmlates = importAll(require.context('./templates', false, /\.twig$/));
+const twigTepmlates = importAll(require.context('./templates', false, /\.twig$/));

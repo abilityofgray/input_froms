@@ -62,8 +62,11 @@ module.exports = {
       },
       
       {
-          test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-          type: 'asset/inline',
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: './svg/[name][ext]'
+        }
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
@@ -86,6 +89,10 @@ module.exports = {
       filename: './templates/footer.twig',
       //template: './templates/footer.twig',
       //hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      filename: './templates/header.twig',
+      
     }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
   ],
