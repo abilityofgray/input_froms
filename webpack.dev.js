@@ -84,15 +84,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ 
       template: './index.twig',
-      inject: 'body'}),
+      //inject: 'body'
+    }),
     new HtmlWebpackPlugin({
       filename: './templates/footer.twig',
-      //template: './templates/footer.twig',
+      template: './templates/footer.twig',
+      inject: false,
       //hash: true,
     }),
     new HtmlWebpackPlugin({
       filename: './templates/header.twig',
-      
+      template: './templates/header.twig',
+      inject: false,
     }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
   ],

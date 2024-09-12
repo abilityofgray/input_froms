@@ -10,19 +10,90 @@
   <header>
     {% include "./templates/header.twig" %}
   </header>
-  <div>OLLOLOLOL</div>
-  <div>adasdaa</div>
-  {% block content %}
-    <div>block content</div>
-  {% endblock %}
-  {{ '22' }}
-  <div></div>
-  <div id="content">{% block content %}{% endblock %}</div>
-  <div class="content">dfsdfdddd</div>
-  <img src="./image/webpack.png" alt="webpack">
-  <div>AAAAAAA</div>
-  <div>
-    <img src="./svg/icon.svg" alt="">
+  <div class="testing">
+    <div class="container">
+      {% block content %}
+      <div>block content</div>
+      {% endblock %}
+      {{ '22' }}
+    </div>
   </div>
+  <main>
+    <div class="container">
+      <div class="content">
+        <div class="content__text">
+          <p>Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: </p>
+          <p class="content-text_red">«Плодотворная дебютная идея»</p>
+        </div>
+        <div class="content__img">
+          <img src="./image/img_1.png" alt="image_1">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="content__text">и Сеанс <span class="content-text_red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
+        <div class="content__table">
+          <div class="table__row">
+            <div class="table__row-head"></div>
+            <div class="table__row-content"></div>
+          </div>
+        </div>
+        <div class="content__note">
+          <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="block__title">
+        Этапы преображения Васюков
+        <a href="">Будущие источники обогащения васюкинцев</a>
+      </div>
+      <div class="block__grid">
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Строительство железнодорожной магистрали Москва-Васюки</div>
+        </div>
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+        </div>
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Строительство дворца для турнира</div>
+        </div>
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Размещение гаражей для гостевого автотранспорта</div>
+        </div>
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
+        </div>
+        <div class="grid__item">
+          <div class="grid-item__enum"></div>
+          <div class="grid-item__content">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
+        </div>
+      </div>  
+    </div>
+    <div class="container">
+      <div class="block__title">
+        Участники турнира
+      </div>
+      <div class="block__list">
+        <div class="list__item">
+          <div class="list-item__image"></div>
+          <div class="list-item__name"></div>
+          <div class="list-item__degree"></div>
+          <div class="list-item__button">
+            <button>подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="block__pagination"></div>
+    </div>
+  </main>
+  <footer>
+    {% include "./templates/footer.twig" %}
+  </footer>
 </body>
 </html>

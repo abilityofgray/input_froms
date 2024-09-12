@@ -97,19 +97,37 @@ legend {
 }
 
 .container {
-  width: 1222px;
+  width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 72px;
+}
+
+.block {
+  margin-bottom: 200px;
+}
+
+.btns_default {
+  border-radius: 66px;
+}
+
+.btns-minor_hover:hover, .btns-minor_default {
+  border-radius: 62px;
 }
 
 .btns_default {
   background-color: #1F1F1F;
   color: #FFFFFF;
+  padding: 20px 50px;
 }
 
 .btns_default-ghost {
   border: solid 2px #1F1F1F;
+  color: #1F1F1F;
+  background-color: transparent;
 }
 
-.btns_hover {
+.btns_hover:hover {
   background-color: #FBCE51;
   color: #1F1F1F;
 }
@@ -134,15 +152,26 @@ legend {
   color: #3057A2;
 }
 
-.btns-minor_hover {
+.btns-minor_hover:hover {
   background-color: #3057A2;
   color: #FFFFFF;
 }
 
-.btns_default {
-  border-radius: 66px;
+.logo {
+  margin-bottom: 62px;
 }
 
-.btns-minor_default, .btns-minor_hover {
-  border-radius: 62px;
+.header__title {
+  font-size: 60px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  max-width: 45%;
+}
+
+.header__title p:nth-child(2) {
+  text-align: center;
+}
+
+.header__title p:nth-child(3) {
+  text-align: right;
 }

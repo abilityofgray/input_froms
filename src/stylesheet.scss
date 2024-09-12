@@ -1,7 +1,10 @@
 @import
-  './blocks/reset.scss',
-  './blocks/variables.scss',
+  './css/blocks/reset.scss',
+  './css/blocks/variables.scss',
   './global.scss',
-  './extends.scss';
+  './extends.scss',
+  './css/components/button.scss',
+  './css/components/logo.scss',
+  './css/components/header_title.scss';
   
-@import './blocks/header.scss', './blocks/footer.scss';
+@import './css/blocks/header.scss', './css/blocks/footer.scss';

@@ -1,0 +1,37 @@
+.btns_default {
+  background-color: $color-primary;
+  @extend %buttons-shared;
+  color: $font-color-light;
+  padding: 20px;
+}
+.btns_default-ghost {
+  border: solid 2px $color-primary;
+  color: $color-primary;
+  background-color: transparent;
+}
+.btns_hover:hover {
+  background-color: $color-hover;
+  color: $color-primary;
+}
+.btns-pagination_default {
+  background-color: $color-primary;
+  color: $font-color-light;
+}
+.btns-pagination_hover {
+  background-color: $color-hover;
+  color: $font-color-light;
+}
+.btns-pagination_disbled {
+  background-color: $color-disabled;
+  color: $font-color-light;
+}
+.btns-minor_default {
+  border: solid 1px $color-minor;
+  @extend %buttons-minor-shared;
+  color: $color-minor;
+}
+.btns-minor_hover:hover {
+  background-color: $color-minor;
+  @extend %buttons-minor-shared;
+  color: $font-color-light;
+}
