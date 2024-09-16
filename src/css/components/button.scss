@@ -2,7 +2,8 @@
   background-color: $color-primary;
   @extend %buttons-shared;
   color: $font-color-light;
-  padding: 20px;
+  padding: 16px 25px;
+  display: block;
 }
 .btns_default-ghost {
   border: solid 2px $color-primary;
@@ -34,4 +35,11 @@
   background-color: $color-minor;
   @extend %buttons-minor-shared;
   color: $font-color-light;
+}
+.button__inner {
+  width: 77%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 16px;
 }

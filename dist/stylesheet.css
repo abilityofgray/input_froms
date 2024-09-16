@@ -101,6 +101,7 @@ legend {
   margin-left: auto;
   margin-right: auto;
   padding: 0 72px;
+  position: relative;
 }
 
 .block {
@@ -118,7 +119,8 @@ legend {
 .btns_default {
   background-color: #1F1F1F;
   color: #FFFFFF;
-  padding: 20px 50px;
+  padding: 16px 25px;
+  display: block;
 }
 
 .btns_default-ghost {
@@ -157,15 +159,30 @@ legend {
   color: #FFFFFF;
 }
 
-.logo {
-  margin-bottom: 62px;
+.button__inner {
+  width: 77%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 16px;
+}
+
+.poster__header {
+  background-image: url(./image/city.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.sun__poster {
+  background-image: url(./image/circle.png);
 }
 
 .header__title {
   font-size: 60px;
   margin-bottom: 25px;
   text-transform: uppercase;
-  max-width: 45%;
 }
 
 .header__title p:nth-child(2) {
@@ -174,4 +191,43 @@ legend {
 
 .header__title p:nth-child(3) {
   text-align: right;
+}
+
+.content__header {
+  width: 45%;
+}
+
+.head__nav {
+  display: flex;
+  gap: 3%;
+}
+
+.poster__header {
+  background-image: url(./image/city.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.header__logo {
+  margin-top: 26px;
+  margin-bottom: 62px;
+}
+
+.content__text {
+  margin-bottom: 24px;
+}
+
+.content_compose__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__container {
+  margin-top: 270px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

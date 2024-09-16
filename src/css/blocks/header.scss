@@ -1,0 +1,26 @@
+.content__header {
+  width: 45%;
+}
+.head__nav {
+  display: flex;
+  gap: 3%;
+}
+
+.header__logo {
+  margin-top: 26px;
+  margin-bottom: 62px;
+}
+.content__text {
+  margin-bottom: 24px;
+}
+.content_compose__header {
+  display: flex;
+  flex-direction: row;
+}
+.header__container {
+  margin-top: 270px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
