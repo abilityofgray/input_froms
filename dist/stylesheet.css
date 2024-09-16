@@ -167,7 +167,7 @@ legend {
   font-size: 16px;
 }
 
-.poster__header {
+.poster {
   background-image: url(./image/city.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -202,7 +202,7 @@ legend {
   gap: 3%;
 }
 
-.poster__header {
+.poster {
   background-image: url(./image/city.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -224,7 +224,7 @@ legend {
   flex-direction: row;
 }
 
-.header__container {
+.poster__container {
   margin-top: 270px;
   position: absolute;
   top: 0;
