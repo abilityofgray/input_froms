@@ -1,5 +1,6 @@
 .content__header {
-  width: 45%;
+  width: 46%;
+  z-index: 1;
 }
 .head__nav {
   display: flex;
@@ -8,10 +9,11 @@
 
 .header__logo {
   margin-top: 26px;
-  margin-bottom: 62px;
+  margin-bottom: 53px;
 }
 .content__text {
-  margin-bottom: 24px;
+  margin-bottom: 41px;
+  padding: 0 3px;
 }
 .content_compose__header {
   display: flex;
@@ -22,5 +24,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  
+}
+header {
+  min-height: 700px;
+}
+
+.text {
+  @extend %golos-text-regular;
+  text-align: center;
+  font-size: 18px;
 }

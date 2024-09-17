@@ -1,6 +1,12 @@
+%button-fonts {
+  @extend %golos-text-medium;
+  font-size: 16px;
+}
+
 .btns_default {
   background-color: $color-primary;
   @extend %buttons-shared;
+  @extend %button-fonts;
   color: $font-color-light;
   padding: 16px 25px;
   display: block;
@@ -10,9 +16,13 @@
   color: $color-primary;
   background-color: transparent;
 }
-.btns_hover:hover {
+.btns_hover-major:hover {
   background-color: $color-hover;
   color: $color-primary;
+}
+.btns_hover-minor:hover {
+  background-color: $color-primary;
+  color: $font-color-light;
 }
 .btns-pagination_default {
   background-color: $color-primary;

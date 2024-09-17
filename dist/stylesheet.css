@@ -129,7 +129,7 @@ legend {
   background-color: transparent;
 }
 
-.btns_hover:hover {
+.btns_hover-major:hover {
   background-color: #FBCE51;
   color: #1F1F1F;
 }
@@ -175,8 +175,27 @@ legend {
   height: 100%;
 }
 
+.sun {
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
 .sun__poster {
-  background-image: url(./image/circle.png);
+  position: absolute;
+  left: 53%;
+}
+
+.sun__inner {
+  background-image: url(./image/Group.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.sun-inner__sun {
+  position: absolute;
 }
 
 .header__title {
@@ -200,14 +219,6 @@ legend {
 .head__nav {
   display: flex;
   gap: 3%;
-}
-
-.poster {
-  background-image: url(./image/city.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
 }
 
 .header__logo {

@@ -189,7 +189,7 @@ eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twi
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<div class=\\\"container content_compose__header\\\">\\r\\n  <div class=\\\"content__header\\\">\\r\\n    <div class=\\\"logo header__logo\\\">\\r\\n      <img src=\\\"./image/logo.png\\\" alt=\\\"\\\">\\r\\n    </div>\\r\\n    <div class=\\\"header__title\\\">\\r\\n      <p>Превратите уездный город</p>\\r\\n      <p>в столицу </p>\\r\\n      <p>земного шара</p>\\r\\n    </div>\\r\\n    <div></div>\\r\\n    <div class=\\\"text content__text\\\">\\r\\n      Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам\\r\\n    </div>\\r\\n    <nav class=\\\"head__nav\\\">\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Поддержать шахматную мысль</span>\\r\\n      </a>\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_default-ghost btns-minor_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Подробнее о турнире</span>\\r\\n      </a>\\r\\n    </nav>\\r\\n  </div>\\r\\n  <div class=\\\"poster poster__container\\\">\\r\\n    <div class=\\\"sun__poster\\\">\\r\\n      <img class=\\\"sun__inner\\\">\\r\\n    </div>\\r\\n    <img class=\\\"pawn\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"queen\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"knight\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"king\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n  </div>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\n    template = twig({\"id\":\"$resolved:234ccb49a99775484d4ccfbad42b9d06e72376d95d6413be09b7a3228e36a69768c6b0dc6226f99efb0c436c81d95da59d4560722a2924a1ec960cd996774b7a:header.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<div class=\\\"container content_compose__header\\\">\\r\\n  <div class=\\\"content__header\\\">\\r\\n    <div class=\\\"logo header__logo\\\">\\r\\n      <img src=\\\"./image/logo.png\\\" alt=\\\"\\\">\\r\\n    </div>\\r\\n    <div class=\\\"header__title\\\">\\r\\n      <p>Превратите уездный город</p>\\r\\n      <p>в столицу </p>\\r\\n      <p>земного шара</p>\\r\\n    </div>\\r\\n    <div></div>\\r\\n    <div class=\\\"text content__text\\\">\\r\\n      Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам\\r\\n    </div>\\r\\n    <nav class=\\\"head__nav\\\">\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Поддержать шахматную мысль</span>\\r\\n      </a>\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_default-ghost btns-minor_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Подробнее о турнире</span>\\r\\n      </a>\\r\\n    </nav>\\r\\n  </div>\\r\\n  <div class=\\\"poster poster__container\\\">\\r\\n    <div class=\\\"sun__poster\\\">\\r\\n      <img class=\\\"sun__inner\\\">\\r\\n    </div>\\r\\n    <img class=\\\"pawn\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"queen\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"knight\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"king\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n  </div>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./templates/header.twig?");
+eval("var twig = (__webpack_require__(/*! twig */ \"../node_modules/twig/src/twig.js\").twig),\n    tokens = [{\"type\":\"raw\",\"value\":\"<div class=\\\"container content_compose__header\\\">\\r\\n  <div class=\\\"content__header\\\">\\r\\n    <div class=\\\"logo header__logo\\\">\\r\\n      <img src=\\\"./image/logo.png\\\" alt=\\\"\\\">\\r\\n    </div>\\r\\n    <div class=\\\"header__title\\\">\\r\\n      <p>Превратите уездный город</p>\\r\\n      <p>в столицу </p>\\r\\n      <p>земного шара</p>\\r\\n    </div>\\r\\n    <div></div>\\r\\n    <div class=\\\"text content__text\\\">\\r\\n      Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам\\r\\n    </div>\\r\\n    <nav class=\\\"head__nav\\\">\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_hover-major\\\">\\r\\n        <span class=\\\"button__inner\\\">Поддержать шахматную мысль</span>\\r\\n      </a>\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_default-ghost btns-minor_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Подробнее о турнире</span>\\r\\n      </a>\\r\\n    </nav>\\r\\n  </div>\\r\\n  <div class=\\\"poster poster__container\\\">\\r\\n    <img class=\\\"pawn\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"queen\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"knight\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"king\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n  </div>\\r\\n  <div class=\\\"sun poster__sun\\\">\\r\\n    <img class=\\\"sun__circle\\\" src=\\\"./image/circle.png\\\" alt=\\\"\\\">\\r\\n    <img src=\\\"./image/Group.png\\\" alt=\\\"\\\">\\r\\n    <div class=\\\"sun__inner sun-inner__sun\\\"></div>\\r\\n  </div>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\n    template = twig({\"id\":\"$resolved:234ccb49a99775484d4ccfbad42b9d06e72376d95d6413be09b7a3228e36a69768c6b0dc6226f99efb0c436c81d95da59d4560722a2924a1ec960cd996774b7a:header.twig\",\"data\":[{\"type\":\"raw\",\"value\":\"<div class=\\\"container content_compose__header\\\">\\r\\n  <div class=\\\"content__header\\\">\\r\\n    <div class=\\\"logo header__logo\\\">\\r\\n      <img src=\\\"./image/logo.png\\\" alt=\\\"\\\">\\r\\n    </div>\\r\\n    <div class=\\\"header__title\\\">\\r\\n      <p>Превратите уездный город</p>\\r\\n      <p>в столицу </p>\\r\\n      <p>земного шара</p>\\r\\n    </div>\\r\\n    <div></div>\\r\\n    <div class=\\\"text content__text\\\">\\r\\n      Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам\\r\\n    </div>\\r\\n    <nav class=\\\"head__nav\\\">\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_hover-major\\\">\\r\\n        <span class=\\\"button__inner\\\">Поддержать шахматную мысль</span>\\r\\n      </a>\\r\\n      <a href=\\\"#\\\" class=\\\"btns_default btns_default-ghost btns-minor_hover\\\">\\r\\n        <span class=\\\"button__inner\\\">Подробнее о турнире</span>\\r\\n      </a>\\r\\n    </nav>\\r\\n  </div>\\r\\n  <div class=\\\"poster poster__container\\\">\\r\\n    <img class=\\\"pawn\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"queen\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"knight\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n    <img class=\\\"king\\\" src=\\\"\\\" alt=\\\"\\\">\\r\\n  </div>\\r\\n  <div class=\\\"sun poster__sun\\\">\\r\\n    <img class=\\\"sun__circle\\\" src=\\\"./image/circle.png\\\" alt=\\\"\\\">\\r\\n    <img src=\\\"./image/Group.png\\\" alt=\\\"\\\">\\r\\n    <div class=\\\"sun__inner sun-inner__sun\\\"></div>\\r\\n  </div>\\r\\n</div>\\r\\n  \\r\\n\",\"position\":{\"start\":0,\"end\":0}}],\"allowInlineIncludes\":true,\"rethrow\":true});\n\nmodule.exports = function(context) { return template.render(context); }\n\nmodule.exports.tokens = tokens;\n\n//# sourceURL=webpack:///./templates/header.twig?");
 
 /***/ }),
 
@@ -409,7 +409,7 @@ eval("// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission 
   \*********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./1010-11-1-2 2.png\": \"./image/1010-11-1-2 2.png\",\n\t\"./Frame 48095641.png\": \"./image/Frame 48095641.png\",\n\t\"./Group.png\": \"./image/Group.png\",\n\t\"./Mask group (1).png\": \"./image/Mask group (1).png\",\n\t\"./Mask group (2).png\": \"./image/Mask group (2).png\",\n\t\"./chess.png\": \"./image/chess.png\",\n\t\"./circle.png\": \"./image/circle.png\",\n\t\"./city.png\": \"./image/city.png\",\n\t\"./horse.png\": \"./image/horse.png\",\n\t\"./img_1.png\": \"./image/img_1.png\",\n\t\"./img_2.png\": \"./image/img_2.png\",\n\t\"./logo.png\": \"./image/logo.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./image sync \\\\.(png%7Cjpe?g%7Csvg)$\";\n\n//# sourceURL=webpack:///./image/_sync_nonrecursive_\\.(png%257Cjpe?");
+eval("var map = {\n\t\"./1010-11-1-2 2.png\": \"./image/1010-11-1-2 2.png\",\n\t\"./Frame 48095641.png\": \"./image/Frame 48095641.png\",\n\t\"./Group.png\": \"./image/Group.png\",\n\t\"./circle.png\": \"./image/circle.png\",\n\t\"./city.png\": \"./image/city.png\",\n\t\"./img_1.png\": \"./image/img_1.png\",\n\t\"./img_2.png\": \"./image/img_2.png\",\n\t\"./king.png\": \"./image/king.png\",\n\t\"./knigt.png\": \"./image/knigt.png\",\n\t\"./logo.png\": \"./image/logo.png\",\n\t\"./pawn.png\": \"./image/pawn.png\",\n\t\"./queen.png\": \"./image/queen.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./image sync \\\\.(png%7Cjpe?g%7Csvg)$\";\n\n//# sourceURL=webpack:///./image/_sync_nonrecursive_\\.(png%257Cjpe?");
 
 /***/ }),
 
@@ -457,39 +457,6 @@ eval("module.exports = __webpack_require__.p + \"./image/Group.png\";\n\n//# sou
 
 /***/ }),
 
-/***/ "./image/Mask group (1).png":
-/*!**********************************!*\
-  !*** ./image/Mask group (1).png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"./image/Mask group (1).png\";\n\n//# sourceURL=webpack:///./image/Mask_group_(1).png?");
-
-/***/ }),
-
-/***/ "./image/Mask group (2).png":
-/*!**********************************!*\
-  !*** ./image/Mask group (2).png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"./image/Mask group (2).png\";\n\n//# sourceURL=webpack:///./image/Mask_group_(2).png?");
-
-/***/ }),
-
-/***/ "./image/chess.png":
-/*!*************************!*\
-  !*** ./image/chess.png ***!
-  \*************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"./image/chess.png\";\n\n//# sourceURL=webpack:///./image/chess.png?");
-
-/***/ }),
-
 /***/ "./image/circle.png":
 /*!**************************!*\
   !*** ./image/circle.png ***!
@@ -509,17 +476,6 @@ eval("module.exports = __webpack_require__.p + \"./image/circle.png\";\n\n//# so
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"./image/city.png\";\n\n//# sourceURL=webpack:///./image/city.png?");
-
-/***/ }),
-
-/***/ "./image/horse.png":
-/*!*************************!*\
-  !*** ./image/horse.png ***!
-  \*************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"./image/horse.png\";\n\n//# sourceURL=webpack:///./image/horse.png?");
 
 /***/ }),
 
@@ -545,6 +501,28 @@ eval("module.exports = __webpack_require__.p + \"./image/img_2.png\";\n\n//# sou
 
 /***/ }),
 
+/***/ "./image/king.png":
+/*!************************!*\
+  !*** ./image/king.png ***!
+  \************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/king.png\";\n\n//# sourceURL=webpack:///./image/king.png?");
+
+/***/ }),
+
+/***/ "./image/knigt.png":
+/*!*************************!*\
+  !*** ./image/knigt.png ***!
+  \*************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/knigt.png\";\n\n//# sourceURL=webpack:///./image/knigt.png?");
+
+/***/ }),
+
 /***/ "./image/logo.png":
 /*!************************!*\
   !*** ./image/logo.png ***!
@@ -553,6 +531,28 @@ eval("module.exports = __webpack_require__.p + \"./image/img_2.png\";\n\n//# sou
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"./image/logo.png\";\n\n//# sourceURL=webpack:///./image/logo.png?");
+
+/***/ }),
+
+/***/ "./image/pawn.png":
+/*!************************!*\
+  !*** ./image/pawn.png ***!
+  \************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/pawn.png\";\n\n//# sourceURL=webpack:///./image/pawn.png?");
+
+/***/ }),
+
+/***/ "./image/queen.png":
+/*!*************************!*\
+  !*** ./image/queen.png ***!
+  \*************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./image/queen.png\";\n\n//# sourceURL=webpack:///./image/queen.png?");
 
 /***/ }),
 
