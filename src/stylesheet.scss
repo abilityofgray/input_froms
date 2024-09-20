@@ -1,11 +1,13 @@
 @import
   './css/blocks/reset.scss',
   './css/blocks/variables.scss',
+  './css/blocks/sections.scss',
   './global.scss',
   './extends.scss',
   './css/components/button.scss',
-  './css/components/poster.scss',
+  './css/components/banner.scss',
   './css/components/header_title.scss',
+  './css/components/running_line.scss',
   './css/components/fonts.scss';
   
 @import './css/blocks/header.scss', './css/blocks/footer.scss';

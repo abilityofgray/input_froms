@@ -1,0 +1,28 @@
+.header {
+  @extend %merriweather-regular;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 48px;
+
+  .header_red {
+    @extend %merriweather-bold;
+    color: $color-scream;
+  }
+}
+
+
+.content__lecture {
+  display: inline-grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 18px;
+
+}
+.content__lecture .content__img {
+  grid-column: span 4;
+}
+.content__lecture .content__text {
+  margin-bottom: 0px;
+  padding-right: 19px;
+  grid-column: span 8;
+}

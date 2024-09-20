@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** ">
+  
 </head>
 <body>
   <header>
     {% include "./templates/header.twig" %}
   </header>
   <main>
-    <div class="container">
-      <div class="content">
-        <div class="content__text">
-          <p>Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: </p>
-          <p class="content-text_red">«Плодотворная дебютная идея»</p>
-        </div>
-        <div class="content__img">
-          <img src="./image/img_1.png" alt="image_1">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="content">
-        <div class="content__text">и Сеанс <span class="content-text_red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
-        <div class="content__table">
-          <div class="table__row">
-            <div class="table-head"></div>
-            <div class="table-content"></div>
+    {% include "./templates/running_line.twig" %}
+    <section class="lecture">
+      <div class="container">
+        <div class="content content__lecture">
+          <div class="content__text">
+            <h2 class="header">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span class="header_red">
+            «Плодотворная дебютная идея»</span></h2>
+          </div>
+          <div class="content__img">
+            <img src="./image/img_1.png" alt="image_1">
           </div>
         </div>
-        <div class="content__note">
-          <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a></div>
       </div>
-    </div>
+    </section>
+    <section class="session">
+      <div class="container">
+        <div class="content">
+          <div class="content__text">и Сеанс <span class="content-text_red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
+          <div class="content__table">
+            <div class="table__row">
+              <div class="table-head"></div>
+              <div class="table-content"></div>
+            </div>
+          </div>
+          <div class="content__note">
+            <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a></div>
+        </div>
+      </div>
+    </section>
     <div class="container">
       <div class="block__title">
         Этапы преображения Васюков

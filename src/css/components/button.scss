@@ -8,13 +8,18 @@
   @extend %buttons-shared;
   @extend %button-fonts;
   color: $font-color-light;
-  padding: 16px 25px;
+  padding: 15px 7px;
   display: block;
+  width: 100%;
 }
 .btns_default-ghost {
   border: solid 2px $color-primary;
   color: $color-primary;
   background-color: transparent;
+  
+}
+.btns_default-ghost span {
+  width: 70%;
 }
 .btns_hover-major:hover {
   background-color: $color-hover;

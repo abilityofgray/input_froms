@@ -117,10 +117,15 @@ legend {
 }
 
 .btns_default {
+  font-size: 16px;
+}
+
+.btns_default {
   background-color: #1F1F1F;
   color: #FFFFFF;
-  padding: 16px 25px;
+  padding: 15px 7px;
   display: block;
+  width: 100%;
 }
 
 .btns_default-ghost {
@@ -129,9 +134,18 @@ legend {
   background-color: transparent;
 }
 
+.btns_default-ghost span {
+  width: 70%;
+}
+
 .btns_hover-major:hover {
   background-color: #FBCE51;
   color: #1F1F1F;
+}
+
+.btns_hover-minor:hover {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
 }
 
 .btns-pagination_default {
@@ -175,45 +189,98 @@ legend {
   height: 100%;
 }
 
-.sun {
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+.king {
+  bottom: 53%;
+  right: 37.1%;
+  z-index: -1;
 }
 
-.sun__poster {
+.pawn {
+  bottom: 28%;
+  right: 3.35%;
+}
+
+.queen {
+  bottom: 72%;
+  right: 11.8%;
+  z-index: -1;
+}
+
+.knight {
+  bottom: 24%;
+  right: 24.6%;
+}
+
+.sun,
+.sun__inner {
   position: absolute;
-  left: 53%;
+  z-index: -2;
+  top: 0;
+  right: 34px;
 }
 
 .sun__inner {
-  background-image: url(./image/Group.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
+  right: 2px;
+  color: #FBCE51;
 }
 
-.sun-inner__sun {
+.poster .king,
+.poster .pawn,
+.poster .queen,
+.poster .knight {
   position: absolute;
 }
 
 .header__title {
-  font-size: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   text-transform: uppercase;
+  font-size: 60px;
+  line-height: 68px;
 }
-
 .header__title p:nth-child(2) {
   text-align: center;
 }
-
 .header__title p:nth-child(3) {
   text-align: right;
 }
 
+.running-line {
+  min-height: 60px;
+  background-color: #F54932;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(./fonts/merriweather/Merriweather-Regular.ttf) format("ttf"), url(./fonts/merriweather/Merriweather-Bold.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url(./fonts/merriweather/GolosText-Regular.ttf) format("ttf"), url(./fonts/merriweather/GolosText-Medium.ttf) format("ttf");
+}
+.header__title {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btns_default {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .content__header {
-  width: 45%;
+  width: 44.2%;
+  z-index: 1;
 }
 
 .head__nav {
@@ -221,13 +288,14 @@ legend {
   gap: 3%;
 }
 
-.header__logo {
+.logo__header {
   margin-top: 26px;
-  margin-bottom: 62px;
+  margin-bottom: 53px;
 }
 
 .content__text {
-  margin-bottom: 24px;
+  margin-bottom: 41px;
+  padding: 0 3px;
 }
 
 .content_compose__header {
@@ -235,10 +303,18 @@ legend {
   flex-direction: row;
 }
 
-.poster__container {
+.banner__container {
   margin-top: 270px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+}
+
+header {
+  min-height: 700px;
+}
+
+.text {
+  text-align: center;
+  font-size: 18px;
 }

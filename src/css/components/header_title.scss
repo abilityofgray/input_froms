@@ -1,15 +1,14 @@
 .header__title {
-  
   margin-bottom: 28px;
   text-transform: uppercase;
   @extend %merriweather-regular;
-  font-size: 68px;
+  font-size: 60px;
   line-height: 68px;
-  p:nth-child(2) {
+  
+  span:nth-child(2) {
     text-align: center;
-
   }
-  p:nth-child(3){
+  span:nth-child(3){
     text-align: right;
   }
 }

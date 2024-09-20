@@ -13,6 +13,7 @@ module.exports = {
   mode: 'development',
   //devtool: 'inline-source-map',
   output: {
+    
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
@@ -20,6 +21,7 @@ module.exports = {
   devServer: {
     static: './dist',
     port: 9000,
+    historyApiFallback: true
   },
   module: {
     
@@ -65,7 +67,7 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/resource',
         generator: {
-          filename: './svg/[name][ext]'
+          filename: './fonts/merriweather/[name][ext]'
         }
       },
       {

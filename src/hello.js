@@ -1,1 +1,0 @@
-console.log('say hello from hello.js');
