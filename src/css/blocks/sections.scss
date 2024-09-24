@@ -11,18 +11,39 @@
 }
 
 
-.content__lecture {
+.lecture_compose {
   display: inline-grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(336px, auto));
   align-items: center;
+  justify-content: center;
   gap: 18px;
-
 }
-.content__lecture .content__img {
-  grid-column: span 4;
-}
-.content__lecture .content__text {
+.lecture_compose .content__text {
   margin-bottom: 0px;
   padding-right: 19px;
-  grid-column: span 8;
+  
+}
+.main__lecture {
+  margin-bottom: 64px;
+}
+.session_compose {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(336px, auto));
+  gap: 18px;
+}
+.session__label {
+  background-image: none;
+  
+}
+.session__header {
+  padding-top: 30px;
+  margin-bottom: 60px;
+ 
+}
+.note__session {
+  
+}
+.content__note {
+  @extend %golos-text-regular;
+  font-size: 20px;
 }

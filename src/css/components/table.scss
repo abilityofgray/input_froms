@@ -1,0 +1,42 @@
+.table__row {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+}
+.table-head {
+  justify-self: start;
+}
+.table__item {
+  
+  
+}
+.table {
+  width: 100%;
+}
+.table__session {
+  margin-bottom: 50px ;
+}
+.table__item:first-child .table__header, 
+.table__item:first-child .table__data {
+  padding-top: 0;
+}
+.table__header {
+  text-align: start;
+  vertical-align: middle;
+  @extend %golos-text-regular;
+  font-size: 20px;
+  padding: 16px 0px;
+  border-bottom: solid 2px #D0D0D0;
+  width: 46%;
+}
+.table__data {
+  text-align: start;
+  vertical-align: middle;
+  @extend %golos-text-semiBold;
+  font-size: 20px;
+  padding: 16px 0 16px 16px;
+  border-left: solid 2px #D0D0D0;
+  border-bottom: solid 2px #D0D0D0;
+  width: 54%;
+}
