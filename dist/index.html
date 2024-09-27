@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  
 <script defer src="bundle.js"></script><link href="stylesheet.css" rel="stylesheet"></head>
 <body>
   <header>
@@ -30,28 +30,29 @@
       </a>
     </nav>
   </div>
-  <div class="poster banner__container">
-    <img class="pawn" src="./image/pawn.png" alt="">
-    <img class="queen" src="./image/queen.png" alt="">
-    <img class="knight" src="./image/knigt.png" alt="">
-    <img class="king" src="./image/king.png" alt="">
+</div>
+<div class="banner__container banner_header">
+  <div class="banner banner__banner-container">
+    <picture>
+      <source srcset="./image/mobile.jpg" media="(max-width: 375px)">
+      <img src="./image/desktop.jpg" alt="баннер">
+    </picture>
   </div>
-  <img class="sun" src="./image/circle.png" alt="">
-  <img class="sun__inner" src="./image/Group.png" alt="">
+  <div class="banner__texture"></div>
 </div>
   
 
   </header>
   <main>
-    <div class="running-line">
-  
+    <div class="running-line running-line__main">
+
 </div>
-    <section class="lecture">
+    <section class="lecture main__lecture">
       <div class="container">
-        <div class="content">
+        <div class="content lecture_compose">
           <div class="content__text">
-            <p>Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: </p>
-            <p class="content-text_red">«Плодотворная дебютная идея»</p>
+            <h2 class="header">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span class="header_red">
+            «Плодотворная дебютная идея»</span></h2>
           </div>
           <div class="content__img">
             <img src="./image/img_1.png" alt="image_1">
@@ -59,53 +60,128 @@
         </div>
       </div>
     </section>
-    <section class="session">
+    <section class="session main__session">
       <div class="container">
-        <div class="content">
-          <div class="content__text">и Сеанс <span class="content-text_red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
-          <div class="content__table">
-            <div class="table__row">
-              <div class="table-head"></div>
-              <div class="table-content"></div>
+        <div class="">
+          <div class="content session_compose">
+            <div class="content__label">
+              <img class="label__img" src="./image/img_2.jpg" alt="">
+              <div class="session__label banner__texture"></div>
+            </div>
+            <div class="content__text">
+              <h2 class="header session__header">
+                и Сеанс <span class="header_red">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера
+              </h2>
+              
+              <div class="grid grid__session">
+                <div class="grid__cell grid-cell_border-right">
+                  <div class="grid__item head-col grid-item_align-start">
+                    <p>Место проведения:</p>
+                  </div>
+                </div>
+                <div class="grid__cell">
+                  <div class="grid__item data-col grid-item_align-start">22 июня 1927 г. в 18:00</div>
+                </div>
+                <div class="grid__cell grid-cell_border-right">
+                  <div class="grid__item head-col">Дата и время мероприятия:</div>
+                </div>
+                <div class="grid__cell">
+                  <div class="grid__item data-col">Клуб «Картонажник»</div>
+                </div>
+                <div class="grid__cell grid-cell_border-right">
+                  <div class="grid__item head-col">Стоимость входных билетов:</div>
+                </div>
+                <div class="grid__cell">
+                  <div class="grid__item data-col">20 коп.</div>
+                </div>
+                <div class="grid__cell grid-cell_border-right">
+                  <div class="grid__item head-col">Плата за игру:</div>
+                </div>
+                <div class="grid__cell">
+                  <div class="grid__item data-col">50 коп.</div>
+                </div>
+                <div class="grid__cell grid-cell_border-right grid-cell_border-none">
+                  <div class="grid__item head-col grid-item_align-end">Взнос на телеграммы:</div>
+                </div>
+                <div class="grid__cell grid-cell_border-none">
+                  <div class="grid__item data-col grid-item_align-end">100 руб. 21 руб. 16 коп.</div>
+                </div>
+              </div>
+              
+              <!--
+              <div class="content__table table__session">
+                <table class="table">
+                  <tbody>
+                    <tr class="table__item">
+                      <th class="table__header">Место проведения:</th>
+                      <td class="table__data">Клуб «Картонажник»</td>
+                    </tr>
+                    <tr class="table__item">
+                      <th class="table__header">Дата и время мероприятия:</th>
+                      <td class="table__data">22 июня 1927 г. в 18:00</td>
+                    </tr>
+                    <tr class="table__item">
+                      <th class="table__header">Стоимость входных билетов:</th>
+                      <td class="table__data">20 коп.</td>
+                    </tr>
+                    <tr class="table__item">
+                      <th class="table__header">Плата за игру:</th>
+                      <td class="table__data">50 коп.</td>
+                    </tr>
+                    <tr class="table__item">
+                      <th class="table__header">Взнос на телеграммы:</th>
+                      <td class="table__data">100 руб. 21 руб. 16 коп.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              -->
+              <div class="content__note note__session">
+                <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a>
+              </div>
             </div>
           </div>
-          <div class="content__note">
-            <a href="">По всем вопросам обращаться в администрацию к К. Михельсону</a></div>
+          
+        </div>
+      
+      </div>
+    </section>
+    <section class="convertion">
+      <div class="container">
+        <h2 class="block__title">
+          Этапы преображения Васюков
+          <a href="">Будущие источники обогащения васюкинцев</a>
+        </h2>
+        <div class="convertion__content">
+          <div class="convertion__grid">
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Строительство железнодорожной магистрали Москва-Васюки</div>
+            </div>
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+            </div>
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Строительство дворца для турнира</div>
+            </div>
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Размещение гаражей для гостевого автотранспорта</div>
+            </div>
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
+            </div>
+            <div class="convertion__item">
+              <div class="grid__enum"></div>
+              <div class="grid__content">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <div class="container">
-      <div class="block__title">
-        Этапы преображения Васюков
-        <a href="">Будущие источники обогащения васюкинцев</a>
-      </div>
-      <div class="block__grid">
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Строительство железнодорожной магистрали Москва-Васюки</div>
-        </div>
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
-        </div>
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Строительство дворца для турнира</div>
-        </div>
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Размещение гаражей для гостевого автотранспорта</div>
-        </div>
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
-        </div>
-        <div class="grid__item">
-          <div class="grid__enum"></div>
-          <div class="grid__content">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
-        </div>
-      </div>  
-    </div>
     <div class="container">
       <div class="block__title">
         Участники турнира
