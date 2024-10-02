@@ -1,8 +1,13 @@
 .convertion__grid {
   display: grid;
-  grid-template-columns: repeat(3, 32.24%);
-  grid-template-rows: 28% 28% 44%;
+  grid-template-columns: repeat(3, 1fr) ;
   gap: 20px;
+  overflow: hidden;
+}
+@media (width <= 999px) {
+  .convertion__grid {
+    grid-template-columns: auto;
+  }
 }
 .convertion__item:nth-child(3) {
   grid-row: span 2;
@@ -11,31 +16,33 @@
   grid-column-start: 2;
   grid-column: span 2;
 }
+
+@media (width <= 999px) {
+  .convertion__item:nth-child(6) {
+    grid-column: span 2;
+  }
+}
 .convertion__item {
   background-image: url('./image/converison_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  
-  
+  @extend %golos-text-medium;
+  font-size: 20px;
   .grid__content {
     @extend %golos-text-medium;
     font-size: 20px;
-
-    .grid__enum {
-      display: flex;
-      width: 36px;
-      height: 36px;
-      background-color: white;
-      border-radius: 100%;
-      align-items: center;
-      justify-content: center;
-      @extend %golos-text-semiBold;
-      font-variant-numeric: tabular-nums;
-    }
   }
 }
-.convertion__item {
-  
+.grid__enum {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  @extend %golos-text-semiBold;
+  font-variant-numeric: tabular-nums;
 }
 .convertion__title {
   width: 65.95%;
@@ -46,10 +53,10 @@
 }
 .grid__content {
   display: grid;
-  grid-template-columns: 9.13% 84.64%;
+  grid-template-columns: 36px 1fr;
   align-items: flex-start;
   padding: 20px;
-  gap: 16px
+  gap: 17px
 }
 .convertion__sub-title {
   display: inline-block;
@@ -62,3 +69,44 @@
 .title__container {
   margin-bottom: 54px;
 }
+.convertion__grid-label {
+  position: absolute;
+  right: 10px;
+  bottom: -2px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .convertion__grid-label {
+    justify-self: center;
+    left: 0;
+    top: 19%;
+  }
+}
+.airplane-image {
+  background-image: url('./image/airplane_border.png');
+  background-repeat: no-repeat;
+  background-size: 376px auto;
+  background-position: 50% 28%;
+}
+
+.convertion-item_content-scope {
+  width: 59.63%;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .convertion-item_content-scope {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .convertion-item_content-scope {
+    width: 56.63% ;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .convertion-item_content-scope {
+    width: 60.63% ;
+  }
+}
+
+
+
+
