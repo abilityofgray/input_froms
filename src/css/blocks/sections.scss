@@ -31,20 +31,13 @@
   
 }
 .main__lecture {
-  margin-bottom: 64px;
+  margin-bottom: 37px;
 }
 .session_compose {
   display: flex;
-  gap: 3.6%;
+  gap: 18px;
 }
-.session__label {
-  position: absolute;
-  left: -30px;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  
-}
+
 .session__header {
   padding-top: 30px;
   margin-bottom: 60px;
@@ -61,14 +54,22 @@
 }
 .session .content__label {
   position: relative;
-  width: 38.78%;
-  height: 534px;
-  
 }
 .content__note {
   @extend %golos-text-regular;
   font-size: 20px;
 }
-.label__img {
+.session__label {
   margin-left: -30px;
+  max-width: none;
+  
+  width: 100%;
+  height: 507px;
+}
+.session__texture {
+  //background-image: url('./image/texture.png');
+  mix-blend-mode: color-burn;
+  background-size: cover;
+  width: 100%;
+  height: 507px;
 }

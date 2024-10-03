@@ -1,4 +1,8 @@
-.participants__list-item {
+.participants__list {
+  display: flex;
+}
+.participants__item
+ {
   display: flex;
   flex-direction: column;
   align-items: center;

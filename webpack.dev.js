@@ -99,6 +99,11 @@ module.exports = {
       template: './templates/header.twig',
       inject: false,
     }),
+    new HtmlWebpackPlugin({
+      filename: './templates/participants.twig',
+      template: './templates/participants.twig',
+      inject: false,
+    }),
     new MiniCssExtractPlugin({ filename: 'stylesheet.css'}),
   ],
 }
