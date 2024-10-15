@@ -30,7 +30,7 @@
         <div class="content session_compose">
           <div class="content__label">
             <img class="session__label" src="./image/img_2.jpg" alt="">
-            <div class="session__texture"></div>
+            <div class="session__texture texture__session-label"></div>
           </div>
           <div class="content__text">
             <h2 class="header session__header">
@@ -57,7 +57,7 @@
     </section>
     <section class="convertion main__convertion">
       <div class="container">
-        <div class="convertion__title title__container">
+        <div class="block__title convertion__title title__container">
           Этапы преображения Васюков
           <span class="convertion__sub-title" href="">Будущие источники обогащения васюкинцев</span>
         </div>
@@ -115,23 +115,29 @@
     </section>
     <section class="participants main__participants">
       <div class="container">
-        <h2 class="header participants__header">
-          Участники турнира
-        </h2>
-        <div class="participants__list">
-          {% include "./templates/participants.twig" with {'name': 'Хозе-Рауль Капабланка','degree': 'Чемпион мира по шахматам' } %}
-          {% include "./templates/participants.twig" with {'name': 'Эммануил Ласкер','degree': 'Чемпион мира по шахматам' } %}
-          {% include "./templates/participants.twig" with {'name': 'Александр Алехин','degree': 'Чемпион мира по шахматам' } %}
-          {% include "./templates/participants.twig" with {'name': 'Арон Нимцович','degree': 'Чемпион мира по шахматам' } %}
-          {% include "./templates/participants.twig" with {'name': 'Рихард Рети','degree': 'Чемпион мира по шахматам' } %}
-          {% include "./templates/participants.twig" with {'name': 'Остап Бендер','degree': 'Гроссмейстер' } %}
+        <div class="participants_composing">
+          <h2 class="block__title participants__header">
+            Участники турнира
+          </h2>
+          <div class="participants__list">
+            {% include "./templates/participants.twig" with {'name': 'Хозе-Рауль Капабланка','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Эммануил Ласкер','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Александр Алехин','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Арон Нимцович','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Рихард Рети','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Остап Бендер','degree': 'Гроссмейстер' } %}
+          </div>
+          <div class="block__pagination pagination-button__container">
+            <button class="pagination__button prev btns-pagination_default btns-pagination_hover"><</button>
+            <div class="pagination__counter"> 1/2</div>
+            <button class="pagination__button next btns-pagination_default btns-pagination_hover">></button>
+          </div>
         </div>
-        <div class="block__pagination"></div>
       </div>
     </section>
     {% include "./templates/running_line.twig" %}
   </main>
-  <footer>
+  <footer class="footer_back-color">
     {% include "./templates/footer.twig" %}
   </footer>
 </body>

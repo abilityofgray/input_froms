@@ -11,6 +11,7 @@
   padding: 15px 7px;
   display: block;
   width: 100%;
+  display: flex;
 }
 .btns_default-ghost {
   border: solid 2px $color-primary;
@@ -32,8 +33,11 @@
 .btns-pagination_default {
   background-color: $color-primary;
   color: $font-color-light;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
-.btns-pagination_hover {
+.btns-pagination_hover:hover {
   background-color: $color-hover;
   color: $font-color-light;
 }
@@ -45,6 +49,8 @@
   border: solid 1px $color-minor;
   @extend %buttons-minor-shared;
   color: $color-minor;
+  text-transform: capitalize;
+  padding: 5px 9px;
 }
 .btns-minor_hover:hover {
   background-color: $color-minor;

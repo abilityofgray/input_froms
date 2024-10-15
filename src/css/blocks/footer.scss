@@ -1,3 +1,20 @@
+footer {
+  width: 100%;
+  height: 150px;
+}
+footer .container {
+  height: 100%;
+}
 .footer_back-color {
   background-color: #E9DED4;
+}
+.footer__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  @extend %golos-text-regular;
+  font-size: 16px;
 }

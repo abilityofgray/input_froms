@@ -2,7 +2,47 @@
   min-height: 60px;
   background-color:  $color-scream;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
 }
 .running-line__main  {
   margin-bottom: 108px;
+}
+
+
+.running-line__list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 30px;
+  width: 100%;
+  animation:  startLine 12s linear, marquee 12s linear 15s infinite;
+}
+.running-line__item {
+  list-style: disc;
+  @extend %merriweather-regular; 
+  font-size: 22px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  
+}
+@keyframes startLine {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

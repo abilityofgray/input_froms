@@ -1,9 +1,11 @@
 .header__title {
+  display: flex;
   margin-bottom: 28px;
   text-transform: uppercase;
   @extend %merriweather-regular;
   font-size: 60px;
   line-height: 68px;
+  flex-direction: column;
   
   span:nth-child(2) {
     text-align: center;
