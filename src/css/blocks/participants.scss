@@ -12,6 +12,10 @@
   gap: 20px;
   
 }
+.participants__wrapper {
+  height: 597px;
+  overflow: hidden;
+}
 .participants__item
  {
   display: flex;
@@ -77,14 +81,17 @@
 .participants-item_focus {
   
 }
+.change_position {
+  transform: translateX(1600px);
+}
 .list_forward{
   //animation: mover 0.75s ease-in-out;
-  transform: translateX(-100%);
+  transform: translateX(-103%);
   transition: 0.5s ease-in-out;
 }
 .list_backward{
   //animation: mover 0.75s ease-in-out;
-  transform: translateX(0);
+  transform: translateX(3%);
   transition: 0.5s ease-in-out;
 } 
 @keyframes mover {
