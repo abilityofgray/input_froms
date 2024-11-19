@@ -120,12 +120,18 @@
             Участники турнира
           </h2>
           <div class="participants__list">
+            {% include "./templates/participants.twig" with {'name': 'Арон Нимцович','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Рихард Рети','degree': 'Чемпион мира по шахматам' } %}
+            {% include "./templates/participants.twig" with {'name': 'Остап Бендер','degree': 'Гроссмейстер' } %}
             {% include "./templates/participants.twig" with {'name': 'Хозе-Рауль Капабланка','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Эммануил Ласкер','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Александр Алехин','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Арон Нимцович','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Рихард Рети','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Остап Бендер','degree': 'Гроссмейстер' } %}
+            
+            
+            
           </div>
           <div class="block__pagination pagination-button__container">
             <button class="pagination__button prev btns-pagination_default btns-pagination_hover"><</button>
