@@ -102,11 +102,14 @@ updateSlider();
   var sliderLoop = true;
   let index = 0;
   const SLIDER_POS = sliderWrapper.clientWidth;
-  sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';;
+  sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
   var directFlag;
   var sliderBandEnd = false;
   var sliderBandStart = false;
   var sliderBandCenter = true;
+  let sliderAnimationId;
+  startSliderAnimation();
+  let buttonAlreadyPressed = false;
   const moveNext = (el, mov) => new Promise (r => 
     {
     try {
@@ -162,6 +165,7 @@ updateSlider();
 
   function showPreviousSlide() {
     let distance;
+    
     directFlag = 'prev';
     pagCounter.textContent = '3/6';
     sliderLoop = false;
@@ -177,24 +181,14 @@ updateSlider();
       distance = sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, true);
     }
-
-    
-    
-    /*
-    var time = 15, x = setInterval(function () {
-      console.log(--time);
-      if (time === 0) {
-        //alert("hello");
-        
-        sliderLoop =true;
-        //moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
-        console.log(sliderLoop);
-        clearInterval(x);
-      }
-    }, 1000);
-    */
-    
-  } 
+    if (!buttonAlreadyPressed) {
+      buttonAlreadyPressed  = true;
+      suspendSliderAnimation();
+    }
+    if (buttonAlreadyPressed) {
+      //reset suspend counter;
+    }
+  }; 
   function showNextSlide() {
 
     let distance;
@@ -215,23 +209,51 @@ updateSlider();
       distance = sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
     }
+    if (!buttonAlreadyPressed) {
+      buttonAlreadyPressed  = true;
+      suspendSliderAnimation();
+    }
+    if (buttonAlreadyPressed) {
+      //reset suspend counter;
+    }
     
-    
-    
+  };
+  
+  
+
+  function startSliderAnimation() {
+    if (!sliderAnimationId)
+      sliderAnimationId = setInterval(sliderAnimation, 4000);
+  }
+  function suspendSliderAnimation() {
+
+    clearInterval(sliderAnimationId);
+    sliderAnimationId = null;
     var time = 15, x = setInterval(function () {
       console.log(--time);
       if (time === 0) {
-        //alert("hello");
-        sliderLoop = true;
-        //moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
-        resumeAutoSlide();
-        console.log(sliderLoop);
+        startSliderAnimation ();
+        buttonAlreadyPressed  = false;
         clearInterval(x);
       }
     }, 1000);
     
   }
 
+  function sliderAnimation () {
+
+    let dist = (SLIDER_POS + slides[index].clientWidth) + 20;
+    
+    sliderWrapper.style.WebkitTransform = 'translateX(-' + dist + 'px)';
+    sliderWrapper.style.transition = '1s ease-in-out';
+    sliderWrapper.ontransitionend =_=> {
+      sliderWrapper.ontransitionend = null;
+      sliderWrapper.style.transition ='none';
+      sliderWrapper.appendChild(slides[index]);
+      sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
+      index = ++index % slides.length;
+    }
+  }
   
   function chunkMove(revert) {
     //slides.lengt
@@ -248,22 +270,18 @@ updateSlider();
         sliderWrapper.appendChild(slidesChunk[i]);
       }
     }
-    
-  
-    
-  
- }
+  }
 
   async function resumeAutoSlide() {
     while (sliderLoop) {
     
     
-      await delay(4000);
-      await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
+      //await delay(4000);
+      //await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
       
-      sliderWrapper.appendChild(slides[index]);
-      sliderWrapper.style.WebkitTransform = 'translateX(0px)';
-      index = ++index % slides.length;
+      //sliderWrapper.appendChild(slides[index]);
+      //sliderWrapper.style.WebkitTransform = 'translateX(0px)';
+      //index = ++index % slides.length;
       
     }
   } 
@@ -280,7 +298,7 @@ updateSlider();
       chunkMove(arrayRevert);
       sliderWrapper.style.WebkitTransform = 'translateX('-''+ sliderWrapper.clientWidth +'px)';
     }
- }
+  }
   function resetPos (){
     console.log('transform reset');
     sliderWrapper.style.WebkitTransform = 'translateX(0px)';
@@ -289,17 +307,19 @@ updateSlider();
   
   }
   
+  /*
   while (sliderLoop) {
     
     
     await delay(4000);
     await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
     
-   sliderWrapper.appendChild(slides[index]);
+    sliderWrapper.appendChild(slides[index]);
     sliderWrapper.style.WebkitTransform = 'translateX(0px)';
     index = ++index % slides.length;
     
   }
+    */
   
   function testInitObject (obj, objName) {
     if(obj !== null) {
