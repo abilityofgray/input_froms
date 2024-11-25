@@ -1,8 +1,8 @@
 .participants_composing {
  display: grid;
- grid-template-columns: repeat (3, 1fr);
+ grid-template-columns: repeat(3, 1fr);
  grid-template-rows: auto;
- gap: 60px;
+ row-gap: 60px;
 }
 .participants {
   
@@ -10,6 +10,8 @@
 .participants__list {
   display: flex;
   gap: 20px;
+  grid-area: 2/span 3;
+  height: 462px;
   
 }
 .participants__wrapper {
@@ -47,10 +49,7 @@
 .participants__header {
   grid-area: 1/span 2;
 }
-.participants__list {
-  grid-area: 2/span 3;
-  height: 462px;
-}
+
 .main__participants {
   margin-bottom: 140px;
 }
@@ -64,11 +63,19 @@
   align-items: center;
   justify-content: end;
   gap: 14px;
-  position: absolute;
+  
   right: 0;
 }
 .pagination-button__container {
   margin-right: 12px;
+}
+.btns__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btns-arrow_rotate {
+  transform: rotate(180deg);
 }
 .section_show {
   display: flex;

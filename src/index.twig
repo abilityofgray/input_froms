@@ -107,9 +107,45 @@
             </div>
             <div class="convertion__grid-label">
               <img class="airplane-image" src="./image/airplane.png" alt="Самолет">
-              
             </div>
           </div>
+        </div>
+        <div class="convertion__content_mobile">
+          <div class="convertion__item">
+            <div class="grid__content">
+              <span class="grid__enum">1</span>
+              <p>Строительство железнодорожной магистрали Москва-Васюки</p>
+              <span class="grid__enum">2</span>
+              <p>Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+            </div>
+          </div>
+          <div class="convertion__item">
+            <div class="grid__content">
+              <span class="grid__enum">3</span>
+              <p>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+            </div>
+          </div>
+          <div class="convertion__item">
+            <div class="grid__content">
+              <span class="grid__enum">4</span>
+              <p>Строительство дворца для турнира</p>
+              <span class="grid__enum">5</span>
+                <p>Размещение гаражей для гостевого автотранспорта</p>
+            </div>
+          </div>
+          <div class="convertion__item">
+            <div class="grid__content">
+              <span class="grid__enum">6</span>
+              <p>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+            </div>
+          </div>
+          <div class="convertion__item">
+            <div class="grid__content">
+              <span class="grid__enum">7</span>
+              <p>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+            </div>
+          </div>
+          <div class="convertion__pagination_mobile"></div>
         </div>
       </div>
     </section>
@@ -129,14 +165,23 @@
             {% include "./templates/participants.twig" with {'name': 'Арон Нимцович','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Рихард Рети','degree': 'Чемпион мира по шахматам' } %}
             {% include "./templates/participants.twig" with {'name': 'Остап Бендер','degree': 'Гроссмейстер' } %}
-            
-            
-            
           </div>
           <div class="block__pagination pagination-button__container">
-            <button class="pagination__button prev btns-pagination_default btns-pagination_hover"><</button>
+            <button class="pagination__button prev btns-pagination_default btns-pagination_hover">
+              <span class="btns__arrow btns-arrow_rotate">
+                <svg  width="12" height="20" viewBox="0 0 12 20"  fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </span>
+            </button>
             <div class="pagination__counter"> 3/6</div>
-            <button class="pagination__button next btns-pagination_default btns-pagination_hover">></button>
+            <button class="pagination__button next btns-pagination_default btns-pagination_hover">
+              <span class="btns__arrow">
+                <svg  width="12" height="20" viewBox="0 0 12 20"  fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
       </div>

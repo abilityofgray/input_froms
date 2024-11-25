@@ -16,6 +16,12 @@
   justify-content: center;
   gap: 5.23%;
 }
+@media (width <= 700px) {
+  .lecture_compose{
+    flex-direction: column;
+    
+  }
+}
 .lecture .content__text {
   width: 62.52%;
 }
@@ -25,17 +31,21 @@
 }
 .lecture_compose .content__text {
   margin-bottom: 0px;
-  
-  
 }
 .main__lecture {
+  padding-top: 48px;
   margin-bottom: 37px;
 }
 .session_compose {
   display: flex;
   gap: 18px;
 }
-
+@media (width <= 700px) {
+  .session_compose {
+    flex-direction: column;
+    
+  }
+}
 .session__header {
   padding-top: 30px;
   margin-bottom: 60px;

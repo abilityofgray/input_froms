@@ -89,247 +89,303 @@ updateSlider();
 
 
 //transform translate chrome breakup render in mozila fine 
-(async ()=>{
-  console.log('init corousel');
-  const sliderWrapper = document.querySelector('.participants__list');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const slides = document.querySelectorAll('.participants__item');
-  const paddingRight = 20;
-  const MANUAL_SLIDER__PADDING = 21;
-  const pagCounter = document.querySelector('.pagination__counter');
-  let p = 0;
-  var sliderLoop = true;
-  let index = 0;
-  const SLIDER_POS = sliderWrapper.clientWidth;
-  sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
-  var directFlag;
-  var sliderBandEnd = false;
-  var sliderBandStart = false;
-  var sliderBandCenter = true;
-  let sliderAnimationId;
-  startSliderAnimation();
-  let buttonAlreadyPressed = false;
-  const moveNext = (el, mov) => new Promise (r => 
-    {
-    try {
-      el.ontransitionstart =_=> {
-        console.log('transitionStart');
-      };
-      el.ontransitionend =_=> {
-        console.log('transitionEnd');
-        el.ontransitionend = null;
-        el.style.transition ='none';
-        r();
-      }
-      el.style.transition = '1s ease-in-out';
-      el.style.WebkitTransform = 'translateX(-' + mov + 'px)';
-    }catch (error) {
-      console.log(error);
-    }
-    
-  });
-  console.log(moveNext);
-  const delay = ms => new Promise (r => {
-    setTimeout(r, ms);
-    
-  } );
-  const testObj = null;
 
-  async function slidLoopTerminate(ms)  {
-    
-  }
-  function mN (el, mov) {
+console.log('init corousel');
+const sliderWrapper = document.querySelector('.participants__list');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const slides = document.querySelectorAll('.participants__item');
+const paddingRight = 20;
+const MANUAL_SLIDER__PADDING = 21;
+const pagCounter = document.querySelector('.pagination__counter');
+let p = 0;
+var sliderLoop = true;
+let index = 0;
+const SLIDER_ITEM_GAP = 20;
+const SLIDER_POS = sliderWrapper.clientWidth + SLIDER_ITEM_GAP;
+console.log('slider pos', SLIDER_POS);
+sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
+var directFlag;
+
+let sliderAnimationId;
+startSliderAnimation();
+let buttonAlreadyPressed = false;
+const SLIDER_STATE = {
+  sliderBandEnd: false,
+  sliderBandStart: false,
+  sliderBandCenter: false,
+}
+SLIDER_STATE.sliderBandCenter = true;
+
+const moveNext = (el, mov) => new Promise (r => 
+  {
+  try {
     el.ontransitionstart =_=> {
       console.log('transitionStart');
     };
     el.ontransitionend =_=> {
+      console.log('transitionEnd');
       el.ontransitionend = null;
       el.style.transition ='none';
       r();
     }
     el.style.transition = '1s ease-in-out';
     el.style.WebkitTransform = 'translateX(-' + mov + 'px)';
-    
+  }catch (error) {
+    console.log(error);
   }
-
-  testInitObject(sliderWrapper, 'sliderWrapper');
-  testInitObject(slides, 'slides');
   
+});
+
+const delay = ms => new Promise (r => {
+  setTimeout(r, ms);
   
+} );
+const testObj = null;
 
+window.addEventListener('resize', function(enent){
+  console.log('window size: ', sliderWrapper.clientWidth);
+}, true);
+
+async function slidLoopTerminate(ms)  {
   
-  prevButton.addEventListener('click', showPreviousSlide);
-  nextButton.addEventListener('click',
-  showNextSlide);
-
-  function showPreviousSlide() {
-    let distance;
-    
-    directFlag = 'prev';
-    pagCounter.textContent = '3/6';
-    sliderLoop = false;
-    if (sliderBandCenter) {
-      sliderBandCenter = false;
-      sliderBandStart = true;
-      distance = 0;
-      buttonSliderPag('', distance + MANUAL_SLIDER__PADDING, true);
-    }
-    if (sliderBandEnd) {
-      sliderBandCenter = true;
-      sliderBandEnd = false;
-      distance = sliderWrapper.clientWidth;
-      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, true);
-    }
-    if (!buttonAlreadyPressed) {
-      buttonAlreadyPressed  = true;
-      suspendSliderAnimation();
-    }
-    if (buttonAlreadyPressed) {
-      //reset suspend counter;
-    }
-  }; 
-  function showNextSlide() {
-
-    let distance;
-    directFlag = 'next';
-    
-    pagCounter.textContent = '6/6';
-    sliderLoop = false;
-    if (sliderBandCenter) {
-      sliderBandCenter = false;
-      sliderBandEnd = true;
-      distance = sliderWrapper.clientWidth + sliderWrapper.clientWidth;
-      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
-    }
-    
-    if (sliderBandStart) {
-      sliderBandCenter = true;
-      sliderBandStart = false;
-      distance = sliderWrapper.clientWidth;
-      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
-    }
-    if (!buttonAlreadyPressed) {
-      buttonAlreadyPressed  = true;
-      suspendSliderAnimation();
-    }
-    if (buttonAlreadyPressed) {
-      //reset suspend counter;
-    }
+}
+function mN (el, mov) {
+  el.ontransitionstart =_=> {
     
   };
+  el.ontransitionend =_=> {
+    el.ontransitionend = null;
+    el.style.transition ='none';
+    r();
+  }
+  el.style.transition = '1s ease-in-out';
+  el.style.WebkitTransform = 'translateX(-' + mov + 'px)';
+  
+}
+
+testInitObject(sliderWrapper, 'sliderWrapper');
+testInitObject(slides, 'slides');
+
+
+
+
+prevButton.addEventListener('click', showPreviousSlide);
+nextButton.addEventListener('click',
+showNextSlide);
+
+function showPreviousSlide() {
+  let distance;
+  let prevSliderPad = 50;
+  directFlag = 'prev';
+  
+  sliderLoop = false;
+  
+  switch(true) {
+    case SLIDER_STATE.sliderBandCenter:
+      SLIDER_STATE.sliderBandCenter = false;
+      SLIDER_STATE.sliderBandEnd = true;
+      distance = 0;
+      buttonSliderPag('', distance + MANUAL_SLIDER__PADDING, true);
+      pagCounter.textContent = '3/6';
+      break;
+    case SLIDER_STATE.sliderBandStart:
+      distance = sliderWrapper.clientWidth;
+      buttonSliderPag('', distance + MANUAL_SLIDER__PADDING, true);
+      pagCounter.textContent = '3/6';
+      break;
+    case SLIDER_STATE.sliderBandEnd:
+      SLIDER_STATE.sliderBandCenter = true;
+      SLIDER_STATE.sliderBandEnd = false;
+      distance = sliderWrapper.clientWidth;
+      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, true);
+      pagCounter.textContent = '6/6';
+      break;    
+  }
+  if (!buttonAlreadyPressed) {
+    buttonAlreadyPressed  = true;
+    suspendSliderAnimation();
+  }
+  if (buttonAlreadyPressed) {
+    //reset suspend counter;
+  }
+  
+}; 
+function showNextSlide() {
+
+  let distance;
+  directFlag = 'next';
   
   
-
-  function startSliderAnimation() {
-    if (!sliderAnimationId)
-      sliderAnimationId = setInterval(sliderAnimation, 4000);
+  sliderLoop = false;
+  
+  if (!buttonAlreadyPressed) {
+    buttonAlreadyPressed  = true;
+    suspendSliderAnimation();
   }
-  function suspendSliderAnimation() {
-
-    clearInterval(sliderAnimationId);
-    sliderAnimationId = null;
-    var time = 15, x = setInterval(function () {
-      console.log(--time);
-      if (time === 0) {
-        startSliderAnimation ();
-        buttonAlreadyPressed  = false;
-        clearInterval(x);
-      }
-    }, 1000);
-    
-  }
-
-  function sliderAnimation () {
-
-    let dist = (SLIDER_POS + slides[index].clientWidth) + 20;
-    
-    sliderWrapper.style.WebkitTransform = 'translateX(-' + dist + 'px)';
-    sliderWrapper.style.transition = '1s ease-in-out';
-    sliderWrapper.ontransitionend =_=> {
-      sliderWrapper.ontransitionend = null;
-      sliderWrapper.style.transition ='none';
-      sliderWrapper.appendChild(slides[index]);
-      sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
-      index = ++index % slides.length;
-    }
+  if (buttonAlreadyPressed) {
+    //reset suspend counter;
   }
   
-  function chunkMove(revert) {
-    //slides.lengt
-    let slidesChunk = document.querySelectorAll('.participants__item');
-    if (revert) {
-      for (let i = slides.length-1; i >= 3; i--) {
-        
-        
-        //let clone = slidesChunk[i].cloneNode(true);
-        sliderWrapper.insertBefore(slidesChunk[i], sliderWrapper.firstChild);
-      }
-    }else {
-      for (let i =0; i < 3; i++) {
-        sliderWrapper.appendChild(slidesChunk[i]);
-      }
-    }
-  }
-
-  async function resumeAutoSlide() {
-    while (sliderLoop) {
-    
-    
-      //await delay(4000);
-      //await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
+  switch(true) {
+    case SLIDER_STATE.sliderBandCenter:
       
-      //sliderWrapper.appendChild(slides[index]);
-      //sliderWrapper.style.WebkitTransform = 'translateX(0px)';
-      //index = ++index % slides.length;
+      SLIDER_STATE.sliderBandCenter = false;
+      SLIDER_STATE.sliderBandEnd = true;
+      distance = sliderWrapper.clientWidth + sliderWrapper.clientWidth;
+      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
+      pagCounter.textContent = '3/6';
+      break;
+    case SLIDER_STATE.sliderBandStart:
+       
+      SLIDER_STATE.sliderBandCenter = true;
+      SLIDER_STATE.sliderBandStart = false;
+      distance = sliderWrapper.clientWidth;
+      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
+      pagCounter.textContent = '3/6';
+      break;  
+    case SLIDER_STATE.sliderBandEnd:
       
+      distance = sliderWrapper.clientWidth + sliderWrapper.clientWidth;
+      buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
+      pagCounter.textContent = '6/6';
+      break;
+    default:
+      
+      break;    
+  }
+};
+
+
+
+function startSliderAnimation() {
+  if (!sliderAnimationId)
+    sliderAnimationId = setInterval(sliderAnimation, 4000);
+}
+function suspendSliderAnimation() {
+
+  clearInterval(sliderAnimationId);
+  sliderAnimationId = null;
+  var time = 3, x = setInterval(function () {
+    console.log(--time);
+    if (time === 0) {
+      startSliderAnimation ();
+      buttonAlreadyPressed  = false;
+      SLIDER_STATE.sliderBandCenter = true;
+      SLIDER_STATE.sliderBandStart = false;
+      SLIDER_STATE.sliderBandEnd =false;
+      clearInterval(x);
     }
-  } 
-  function buttonSliderPag(direction, pos, arrayRevert) {
-    //+21 px
+  }, 1000);
+  
+}
+
+function sliderAnimation () {
+
+  let dist = (SLIDER_POS + slides[index].clientWidth) + SLIDER_ITEM_GAP;
+  console.log('anim slider dist', dist);
+  sliderWrapper.style.WebkitTransform = 'translateX(-' + dist + 'px)';
+  sliderWrapper.style.transition = '1s ease-in-out';
+  sliderWrapper.ontransitionend =_=> {
+    sliderWrapper.ontransitionend = null;
+    sliderWrapper.style.transition ='none';
+    sliderWrapper.appendChild(slides[index]);
+    sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
+    index = ++index % slides.length;
+  }
+}
+
+function chunkMove(revert) {
+  //slides.lengt
+  let slidesChunk = document.querySelectorAll('.participants__item');
+  if (revert) {
+    for (let i = slides.length-1; i >= 6; i--) {
+      //let clone = slidesChunk[i].cloneNode(true);
+      //console.log(i);
+      
+      
+      sliderWrapper.insertBefore(slidesChunk[i], sliderWrapper.firstChild);
+    }
+  }else {
+    for (let i = 0; i < 3; i++) {
+      
+      sliderWrapper.appendChild(slidesChunk[i]);
+    }
+  }
+}
+
+async function resumeAutoSlide() {
+  while (sliderLoop) {
+  
+  
+    //await delay(4000);https://yandex.ru/images/search?text=remote%20job&parent-reqid=1732174508754095-5313789214326914908-balancer-l7leveler-kubr-yp-sas-195-BAL&from=tabbar
+    //await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
     
+    //sliderWrapper.appendChild(slides[index]);
+    //sliderWrapper.style.WebkitTransform = 'translateX(0px)';
+    //index = ++index % slides.length;
+    
+  }
+} 
+function buttonSliderPag(direction, pos, arrayRevert) {
+  //+21 px
+  
+  console.log();
+  if (!arrayRevert) {
+    pos = pos + SLIDER_ITEM_GAP;
+    console.log(pos);
     sliderWrapper.style.transition = '1s ease-in-out';
     sliderWrapper.style.WebkitTransform = "translateX(" + direction + pos + "px)";
+  }else {
+    pos = pos - SLIDER_ITEM_GAP;
+    console.log(pos);
+    sliderWrapper.style.transition = '1s ease-in-out';
+    sliderWrapper.style.WebkitTransform = "translateX(-" + direction + pos + "px)";
+  }
+  
 
-    sliderWrapper.ontransitionend =_=> {
-      sliderWrapper.ontransitionend = null;
-      sliderWrapper.style.transition =
-      'none';
-      chunkMove(arrayRevert);
-      sliderWrapper.style.WebkitTransform = 'translateX('-''+ sliderWrapper.clientWidth +'px)';
-    }
+  sliderWrapper.ontransitionend =_=> {
+    
+    sliderWrapper.ontransitionend = null;
+    sliderWrapper.style.transition =
+    'none';
+    chunkMove(arrayRevert);
+    console.log (sliderWrapper.clientWidth);
+    let p =sliderWrapper.clientWidth + SLIDER_ITEM_GAP;
+    sliderWrapper.style.WebkitTransform = 'translateX(-'+ p  +'px)';
   }
-  function resetPos (){
-    console.log('transform reset');
-    sliderWrapper.style.WebkitTransform = 'translateX(0px)';
-  }  
-  function sliderUpdate (){
+}
+function resetPos (){
   
-  }
+  sliderWrapper.style.WebkitTransform = 'translateX(0px)';
+}  
+function sliderUpdate (){
+
+}
+
+/*
+while (sliderLoop) {
   
-  /*
-  while (sliderLoop) {
-    
-    
-    await delay(4000);
-    await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
-    
-    sliderWrapper.appendChild(slides[index]);
-    sliderWrapper.style.WebkitTransform = 'translateX(0px)';
-    index = ++index % slides.length;
-    
-  }
-    */
   
-  function testInitObject (obj, objName) {
-    if(obj !== null) {
-      console.log('Pass: ' + objName + ' ' + obj);
-      console.log(obj);
-    }else {
-      console.log('Not Pass: ' + objName + ' object is empty');
-    }
+  await delay(4000);
+  await moveNext (sliderWrapper, slides[index].clientWidth + paddingRight);
+  
+  sliderWrapper.appendChild(slides[index]);
+  sliderWrapper.style.WebkitTransform = 'translateX(0px)';
+  index = ++index % slides.length;
+  
+}
+  */
+
+function testInitObject (obj, objName) {
+  if(obj !== null) {
+    console.log('Pass: ' + objName + ' ' + obj);
+    console.log(obj);
+  }else {
+    console.log('Not Pass: ' + objName + ' object is empty');
   }
-})();
+}
+
 
 
 

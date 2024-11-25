@@ -12,11 +12,13 @@
   display: block;
   width: 100%;
   display: flex;
+  transition: background-color .15s cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 .btns_default-ghost {
   border: solid 2px $color-primary;
   color: $color-primary;
   background-color: transparent;
+  
   
 }
 .btns_default-ghost span {
@@ -36,6 +38,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color .15s cubic-bezier(0.1, -0.6, 0.2, 0);
+  
 }
 .btns-pagination_hover:hover {
   background-color: $color-hover;
