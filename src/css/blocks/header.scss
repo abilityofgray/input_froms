@@ -6,14 +6,41 @@
   display: flex;
   gap: 3%;
 }
-
+@media (width <= 375px) {
+  .head__nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 .logo__header {
-  margin-top: 26px;
+  padding-top: 26px;
   margin-bottom: 53px;
+}
+@media (width <= 375px) {
+  .logo__header {
+    padding-top: 17px;
+    margin-bottom: 40px;
+
+    img {
+      max-width: 63%;
+      height: auto;
+    }
+  }
 }
 .content__text {
   margin-bottom: 41px;
   
+}
+@media (width <= 375px) {
+  .content__header {
+    .text {
+      text-align: start;
+    }
+  }
+  .content__text {
+    margin-bottom: 34px;
+    
+  }
 }
 .content_compose__header {
   display: flex;

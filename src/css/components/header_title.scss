@@ -14,3 +14,11 @@
     text-align: right;
   }
 }
+
+@media (width <= 375px) {
+  .header__title {
+    font-size: 36px;
+    line-height: 41px;
+    margin-bottom: 22px;
+  }
+}
