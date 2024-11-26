@@ -1,95 +1,3 @@
-/*
-console.log('slider_init');
-
-const slider = document.querySelector('.participants__list');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const sliders = 
-Array.from(slider.querySelectorAll('.participants__item'));
-const slideCount = sliders.length;
-let sliderIndex = 0;
-let sliderLine = 0;
-let transition;
-
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click',
-showNextSlide);
-
-function showPreviousSlide () {
-  sliderIndex = (sliderIndex - 1 + slideCount) % slideCount;
-  console.log(sliderIndex);
-  sliderMover(sliderIndex)
-  
-  mover('list_backward');
-  transition = document.querySelector(".list_backward");
-  console.log(transition);
-  sliderRelocate();
-  if(sliderIndex === 3 || sliderIndex === 0) {
-    sliderRelocate();
-  }
-  updateSlider();
-}
-function showNextSlide() {
-  sliderIndex = (sliderIndex +1) % slideCount;
-  sliderMover(sliderIndex);
-  console.log(sliderIndex);
-  
-  mover('list_forward');
-  if(sliderIndex === 3 || sliderIndex === 0) {
-    sliderRelocate();
-  }
-  
-  updateSlider();
-}
-function sliderRelocate() {
-  let fC = slider.firstElementChild;
-  console.log(fC.getBoundingClientRect());
-  fC.style.transoform = "translateX(1600px)";
-  fC.classList.add('change_position');
-  console.log(fC.style);
-  slider.appendChild(fC);
-}
-function mover(cl){
-  slider.classList.remove('list_backward');
-  slider.classList.remove('list_forward');
-  if (slider.classList.contains(cl)){
-    slider.classList.remove(cl);
-  }else {
-    slider.classList.add(cl);
-  }
-}
-function updateSlider () {
-  console.log(slider.getBoundingClientRect());
-  sliders.forEach((slide, index) => {
-    if (index === sliderIndex) {
-      //slide.classList.add('participants-item_focus');
-      
-      //console.log(sliders.classList());
-      //sliders.computedStyleMap.display = 'block';console.log(slider.firstElementChild);
-      
-
-    }else {
-      //sliders.computedStyleMap.display = 'none'
-      //sliders.classList.add('slide_hide');
-      //slide.classList.remove('participants-item_focus');
-    }
-  });
-  //console.log(sliderIndex);
-
-}
-function sliderMover(index){
-  //need every third slide
-  if (index === 3) {
-    //console.log('slider number 3');
-
-  }
-}
-updateSlider();
-*/
-
-
-//transform translate chrome breakup render in mozila fine 
-
 console.log('init corousel');
 const sliderWrapper = document.querySelector('.participants__list');
 const prevButton = document.querySelector('.prev');
@@ -106,7 +14,7 @@ const SLIDER_POS = sliderWrapper.clientWidth + SLIDER_ITEM_GAP;
 console.log('slider pos', SLIDER_POS);
 sliderWrapper.style.WebkitTransform = 'translateX(-' + SLIDER_POS + 'px)';
 var directFlag;
-
+let counterReseter;
 let sliderAnimationId;
 startSliderAnimation();
 let buttonAlreadyPressed = false;
@@ -145,6 +53,7 @@ const testObj = null;
 
 window.addEventListener('resize', function(enent){
   console.log('window size: ', sliderWrapper.clientWidth);
+  
 }, true);
 
 async function slidLoopTerminate(ms)  {
@@ -178,28 +87,32 @@ function showPreviousSlide() {
   let distance;
   let prevSliderPad = 50;
   directFlag = 'prev';
-  
   sliderLoop = false;
   
   switch(true) {
     case SLIDER_STATE.sliderBandCenter:
+      console.log('SLIDER_STATE.sliderBandCenter', SLIDER_STATE.sliderBandCenter);
       SLIDER_STATE.sliderBandCenter = false;
-      SLIDER_STATE.sliderBandEnd = true;
+      SLIDER_STATE.sliderBandStart = true;
       distance = 0;
       buttonSliderPag('', distance + MANUAL_SLIDER__PADDING, true);
-      pagCounter.textContent = '3/6';
+      
       break;
     case SLIDER_STATE.sliderBandStart:
-      distance = sliderWrapper.clientWidth;
+      console.log('SLIDER_STATE.sliderBandStart', SLIDER_STATE.sliderBandStart);
+      distance = 0;
       buttonSliderPag('', distance + MANUAL_SLIDER__PADDING, true);
-      pagCounter.textContent = '3/6';
+      SLIDER_STATE.sliderBandCenter = true;
+      SLIDER_STATE.sliderBandStart = false;
+      
       break;
     case SLIDER_STATE.sliderBandEnd:
+      console.log('SLIDER_STATE.sliderBandEnd', SLIDER_STATE.sliderBandEnd);
       SLIDER_STATE.sliderBandCenter = true;
       SLIDER_STATE.sliderBandEnd = false;
       distance = sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, true);
-      pagCounter.textContent = '6/6';
+      
       break;    
   }
   if (!buttonAlreadyPressed) {
@@ -209,10 +122,18 @@ function showPreviousSlide() {
   if (buttonAlreadyPressed) {
     //reset suspend counter;
   }
+  console.log('prev slide', counterReseter);
+  if (!counterReseter) {
+    counterReseter = true;
+    pagCounter.textContent = '6/6';
+  } else {
+    counterReseter = false;
+    pagCounter.textContent = '3/6';
+  }
   
 }; 
 function showNextSlide() {
-
+  
   let distance;
   directFlag = 'next';
   
@@ -221,34 +142,44 @@ function showNextSlide() {
   
   if (!buttonAlreadyPressed) {
     buttonAlreadyPressed  = true;
+    
     suspendSliderAnimation();
   }
   if (buttonAlreadyPressed) {
     //reset suspend counter;
+    
   }
-  
+  console.log('next slide', counterReseter);
+  if (!counterReseter) {
+    counterReseter = true;
+    pagCounter.textContent = '6/6';
+  } else {
+    counterReseter = false;
+    pagCounter.textContent = '3/6';
+  }
+    
   switch(true) {
     case SLIDER_STATE.sliderBandCenter:
-      
+      console.log('SLIDER_STATE.sliderBandCenter', SLIDER_STATE.sliderBandCenter);
       SLIDER_STATE.sliderBandCenter = false;
       SLIDER_STATE.sliderBandEnd = true;
       distance = sliderWrapper.clientWidth + sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
-      pagCounter.textContent = '3/6';
+      
       break;
     case SLIDER_STATE.sliderBandStart:
-       
+      console.log('SLIDER_STATE.sliderBandStart', SLIDER_STATE.sliderBandStart);
       SLIDER_STATE.sliderBandCenter = true;
       SLIDER_STATE.sliderBandStart = false;
       distance = sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
-      pagCounter.textContent = '3/6';
+      
       break;  
     case SLIDER_STATE.sliderBandEnd:
-      
+      console.log('SLIDER_STATE.sliderBandEnd', SLIDER_STATE.sliderBandEnd);
       distance = sliderWrapper.clientWidth + sliderWrapper.clientWidth;
       buttonSliderPag('-', distance + MANUAL_SLIDER__PADDING, false);
-      pagCounter.textContent = '6/6';
+      
       break;
     default:
       
@@ -343,7 +274,6 @@ function buttonSliderPag(direction, pos, arrayRevert) {
     sliderWrapper.style.WebkitTransform = "translateX(-" + direction + pos + "px)";
   }
   
-
   sliderWrapper.ontransitionend =_=> {
     
     sliderWrapper.ontransitionend = null;
@@ -352,7 +282,8 @@ function buttonSliderPag(direction, pos, arrayRevert) {
     chunkMove(arrayRevert);
     console.log (sliderWrapper.clientWidth);
     let p =sliderWrapper.clientWidth + SLIDER_ITEM_GAP;
-    sliderWrapper.style.WebkitTransform = 'translateX(-'+ p  +'px)';
+    sliderWrapper.style.WebkitTransform = 'translateX(-'+ p +'px)';
+
   }
 }
 function resetPos (){
@@ -384,6 +315,10 @@ function testInitObject (obj, objName) {
   }else {
     console.log('Not Pass: ' + objName + ' object is empty');
   }
+}
+function TEST_sliderPos(slidePos) {
+  let posName = sliderPos;
+  console.log()
 }
 
 
