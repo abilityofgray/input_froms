@@ -7,6 +7,11 @@
   min-height: 60px;
   overflow: hidden;
 }
+@media (width <=375px) {
+  .running-line__wrap {
+    min-height: 37px;
+  }
+}
 .running-line__main  {
   margin-bottom: 108px;
 }
@@ -30,6 +35,12 @@
   text-transform: uppercase;
   margin-left: 35px;
   flex-shrink: 0;
+}
+@media (width <= 375px) {
+  .running-line__item {
+    font-size: 16px;
+  }
+  
 }
 .run-line_animation {
   animation: run_l 20s linear infinite;

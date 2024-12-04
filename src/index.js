@@ -3,6 +3,7 @@ import './stylesheet.scss'
 import './index.twig'
 import './svg/icon.svg'
 import './scripts/participants_slider.js'
+import './scripts/convertion_slider.js'
 
 //import './image/*.png';
 

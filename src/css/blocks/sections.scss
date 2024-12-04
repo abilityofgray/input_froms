@@ -11,48 +11,102 @@
 }
 .lecture_compose {
   display: flex;
-  
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 5.23%;
+  gap: 6%;
+  .content__text {
+    margin-bottom: 0px;
+  }
 }
-@media (width <= 700px) {
+.lecture {
+  .content__text {
+    .header {
+      display: inline;
+    }
+    .header:nth-child(2) {
+      order: 2;
+    }
+  }
+}
+
+@media (width <= 1000px) {
   .lecture_compose{
     flex-direction: column;
+    align-items: start;
     
+    gap: 22px;
+    .content__text {
+      display: contents;
+      
+    }
+    .content__img {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+    }
   }
 }
 .lecture .content__text {
   width: 62.52%;
 }
 
-.lecture .content__img {
-  width: 32.24%;
-}
-.lecture_compose .content__text {
-  margin-bottom: 0px;
-}
-.main__lecture {
-  padding-top: 48px;
-  margin-bottom: 37px;
-}
-.session_compose {
-  display: flex;
-  gap: 18px;
-}
-@media (width <= 700px) {
-  .session_compose {
-    flex-direction: column;
+@media (width <=530px) {
+  .content__text {
+    .header {
+      font-size: 28px;
+      line-height: 39px;
+    }
     
   }
 }
+  
+
+.lecture .content__img {
+  img {
+    max-width: none;
+  }
+}
+
+.main__lecture {
+  padding-top: 77px;
+  margin-bottom: 37px;
+}
+@media (width <= 375px) {
+  .main__lecture {
+    padding-top: 47px;
+  }
+  
+}
+.session_compose {
+  display: flex;
+  gap: 19px;
+}
+@media (width <= 1000px) {
+  .session_compose {
+    flex-direction: column;
+  }
+  
+}
+
 .session__header {
   padding-top: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
  
+}
+@media (width <= 375px) {
+  .session__header {
+    padding-top: 0;
+    margin-bottom: 23px;
+  }
 }
 .main__session {
   margin-bottom: 200px;
+}
+@media (width <= 375px) {
+  .main__session {
+    margin-bottom: 79px;
+  }
+  
 }
 .main__convertion {
   margin-bottom: 200px;
@@ -60,31 +114,66 @@
 .session .content__text {
   width: 57.61%;
 }
+@media (width <= 1000px) {
+  .session {
+    .content__text {
+      width: 100%;
+    }
+  }
+}
 .session .content__label {
   position: relative;
+}
+@media (width <= 1000px) {
+  .session {
+    .content__label {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+  }
 }
 .content__note {
   @extend %golos-text-regular;
   font-size: 20px;
 }
+@media (width <= 375px) {
+  .content__note {
+    font-size: 18px;
+  }
+}
 .content__label {
   flex-shrink: 0;
 }
 .session__label {
-  margin-left: -30px;
-  max-width: none;
-  width: 106%;
+  position: relative;
+  max-width: 529px;
   height: auto;
+  margin-left: -29px;
+}
+@media (width <= 375px) {
+  .session__label {
+    margin-left: 0px;
+    img {
+      max-width: none;
+    }
+  }
+  .session {
+    .content__label {
+      
+    }
+  }
 }
 .session__texture {
   background-image: url('./image/texture.png');
   mix-blend-mode: color-burn;
   background-size: cover;
-  width: 99%;
-  height: 566px;
+  width: 100%;
+  height: 100%;
 }
 .texture__session-label {
   position: absolute;
-  top: 1px;
-  left: -29px;
+  top: 0px;
+  left: auto;
+  right: auto;
 }

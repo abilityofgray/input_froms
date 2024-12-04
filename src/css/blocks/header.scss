@@ -1,22 +1,25 @@
 .content__header {
   width: 542px;
   z-index: 1;
+  .content__text {
+    margin-bottom: 36px;
+  }
 }
 .head__nav {
   display: flex;
   gap: 3%;
 }
-@media (width <= 375px) {
+@media (width <= 667px) {
   .head__nav {
     flex-direction: column;
-    gap: 15px;
+    gap: 9px;
   }
 }
 .logo__header {
   padding-top: 26px;
-  margin-bottom: 53px;
+  margin-bottom: 56px;
 }
-@media (width <= 375px) {
+@media (width <= 667px) {
   .logo__header {
     padding-top: 17px;
     margin-bottom: 40px;
@@ -31,7 +34,8 @@
   margin-bottom: 41px;
   
 }
-@media (width <= 375px) {
+
+@media (width <= 470px) {
   .content__header {
     .text {
       text-align: start;
@@ -50,7 +54,12 @@
 header {
   min-height: 700px;
 }
-
+@media (width <=375px) {
+  header {
+    min-height: 774px;
+  }
+  
+}
 .text {
   @extend %golos-text-regular;
   text-align: center;

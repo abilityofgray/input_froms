@@ -3,4 +3,9 @@
   text-transform: uppercase;
   font-size: 54px;
   
+}
+@media (width <= 530px) {
+  .block__title {
+    font-size: 36px;
+  }
 } 

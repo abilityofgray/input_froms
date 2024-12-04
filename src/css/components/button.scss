@@ -2,7 +2,20 @@
   @extend %golos-text-medium;
   font-size: 16px;
 }
-
+@mixin btns--transition--animation {
+  transition: all .15s cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+@mixin btns-default {
+  background-color: $color-primary;
+  @extend %buttons-shared;
+  @extend %button-fonts;
+  color: $font-color-light;
+  padding: 15px 7px;
+  display: block;
+  width: 100%;
+  display: flex;
+  @include btns--transition--animation;
+}
 .btns_default {
   background-color: $color-primary;
   @extend %buttons-shared;
@@ -12,14 +25,23 @@
   display: block;
   width: 100%;
   display: flex;
-  transition: background-color .15s cubic-bezier(0.1, -0.6, 0.2, 0);
+  @include btns--transition--animation;
 }
 .btns_default-ghost {
   border: solid 2px $color-primary;
   color: $color-primary;
   background-color: transparent;
-  
-  
+  @include btns--transition--animation;
+}
+
+@media (width <= 1177px) {
+  .btns_default-ghost {
+    border: solid rgba(255, 255, 255, 0.9) 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    &:hover {
+      border: solid $color-primary 2px;
+    }
+  }
 }
 .btns_default-ghost span {
   width: 70%;
@@ -41,6 +63,14 @@
   transition: background-color .15s cubic-bezier(0.1, -0.6, 0.2, 0);
   
 }
+@media (width <= 375px) {
+  .btns-pagination_default {
+    width: 36px;
+    height: 36px
+  }
+}
+
+
 .btns-pagination_hover:hover {
   background-color: $color-hover;
   color: $font-color-light;
