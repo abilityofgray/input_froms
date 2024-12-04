@@ -11,7 +11,10 @@
 }
 @media (width <= 700px) {
   .convertion__grid {
+    background-image: url('./image/converison_background.jpg');
     display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 }
 .convertion__item:nth-child(3) {
@@ -42,7 +45,12 @@
  .convertion__item {
   position: absolute;
   opacity: 0;
+  background-image: none;
  }
+}
+.convertion__item_active {
+  opacity: 1;
+  position: relative;
 }
 @media (min-width: 375px) and (max-width: 700px) {
   .convertion__item {
@@ -154,10 +162,18 @@
 .airplane-image {
   background-image: url('./image/airplane_border.png');
   background-repeat: no-repeat;
-  
   background-position: 50% 28%;
 }
-
+@media (width <= 375px) {
+  .convertion__grid-label {
+    height: 335px;
+    width: 337px;
+  }
+  
+  .airplane-image {
+    width: auto;
+  }
+}
 .convertion-item_content-scope {
   width: 59.63%;
 }
