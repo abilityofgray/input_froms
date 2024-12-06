@@ -71,7 +71,10 @@
   }
 }
 
-
+button[disabled] {
+  background-color: darkgray;
+  cursor: not-allowed;
+}
 .btns-pagination_hover:hover {
   background-color: $color-hover;
   color: $font-color-light;

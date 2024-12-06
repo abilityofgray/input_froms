@@ -1,20 +1,43 @@
 .convertion__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   overflow: hidden;
 }
-@media (width <= 999px) {
+/*
+@media (min-width: 500px) and (max-width: 999px) {
   .convertion__grid {
     grid-template-columns: auto;
+    gap: 8px;
   }
 }
-@media (width <= 700px) {
+*/
+
+@media (min-width: 535px) and (max-width: 999px) {
+  .convertion__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+/*
+@media (min-width: 375px) and (max-width: 535px) {
+  .convertion__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+*/
+@media (width <= 535px) {
   .convertion__grid {
     background-image: url('./image/converison_background.jpg');
     display: flex;
+    padding: 61px 27px 0 20px;
     flex-direction: column;
-    gap: 0;
+    min-height: 300px;
+    width: 100%;
+    gap: 27px;
+    margin-bottom: 28px;
   }
 }
 .convertion__item:nth-child(3) {
@@ -25,10 +48,14 @@
   grid-column: span 2;
 }
 
+
 @media (width <= 999px) {
   .convertion__item:nth-child(6) {
     grid-column: span 2;
   }
+}
+@media (min-width: 375px) and (max-width: 535px) {
+  
 }
 .convertion__item {
   background-image: url('./image/converison_background.jpg');
@@ -36,17 +63,32 @@
   background-size: cover;
   @extend %golos-text-medium;
   font-size: 20px;
+  transition: opacity 0.15s ease-in;
   .grid__content {
     @extend %golos-text-medium;
     font-size: 20px;
   }
 }
-@media (width <= 375px) {
+@media (width <= 535px) {
  .convertion__item {
   position: absolute;
   opacity: 0;
   background-image: none;
+  transition: opacity 0.155s ease-in;
+  max-width: 100%;
+  .grid__content {
+    font-size: 18px;
+    padding: 0;
+    
+  }
  }
+}
+@media (width <= 999px) {
+  .convertion__item {
+    .grid__content {
+      font-size: 18px;
+    }
+  }
 }
 .convertion__item_active {
   opacity: 1;
@@ -57,7 +99,8 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 100%;
+    max-width: 100%;
+    
   }
 }
 .grid__enum {
@@ -83,6 +126,14 @@
     width: 100%;
   }
 }
+@media (width <= 768px) {
+  .convertion {
+    .convertion__title {
+      margin-bottom: 142px;
+    }
+  }
+  
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .convertion__title {
     width: 84%;
@@ -95,6 +146,9 @@
   align-items: flex-start;
   padding: 20px;
   gap: 17px
+}
+.convertion__content {
+  position: relative;
 }
 .convertion__content_mobile {
   
@@ -140,7 +194,7 @@
 }
 @media (min-width: 375px) and (max-width: 762px) {
   .title__container {
-    margin-bottom: 186px;
+    margin-bottom: 144px;
   }
 }
 @media (width <= 375px) {
@@ -148,34 +202,76 @@
 }
 .convertion__grid-label {
   position: absolute;
-  right: 10px;
-  bottom: -2px;
+  right: -65px;
+  bottom: 0px;
+  width: 401px;
+  top: auto;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width <= 375px) {
   .convertion__grid-label {
     justify-self: center;
-    left: auto;
+    left: 3%;
     right: auto;
-    top: 220px;
+    top: -135px;
+  }
+}
+@media (min-width: 376px) and (max-width: 533px) {
+  .convertion__grid-label {
+    justify-self: center;
+    left: 19%;
+    right: auto;
+    top: -135px;
+  }
+}
+@media (min-width: 534px) and (max-width: 644px) {
+  
+  .convertion__grid-label {
+    justify-self: center;
+    left: 0%;
+    right: none;
+    top: -127px;
+  }
+}
+@media (min-width: 645px) and (max-width: 767px) {
+  .convertion__grid-label {
+    justify-self: center;
+    left: 27%;
+    right: auto;
+    top: -144px;
   }
 }
 .airplane-image {
   background-image: url('./image/airplane_border.png');
   background-repeat: no-repeat;
   background-position: 50% 28%;
+  background-size: 93%;
 }
-@media (width <= 375px) {
+
+@media (width <= 767px) {
+  .airplane-image {
+    transform: rotateZ(-4deg);
+  }
+}
+@media (width <= 767px) {
   .convertion__grid-label {
-    height: 335px;
+    height: 118px;
     width: 337px;
   }
   
   .airplane-image {
     width: auto;
+    
   }
 }
+@media (width <= 600px) {
+  .airplane-image {
+    background-size: 93%;
+  }
+  
+}
 .convertion-item_content-scope {
-  width: 59.63%;
+  width: 62.63%;
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .convertion-item_content-scope {
@@ -196,7 +292,7 @@
   display: none;
   
 }
-@media (width <= 375px) {
+@media (width <= 535px) {
   .convert__pagination {
     display: flex;
     align-items: center;
@@ -222,9 +318,11 @@
   width: 10px;
   background-color: #D9D9D9;
   border-radius: 50%;
+  
 }
 .convert__pag-dot--active {
   background-color: #313131;
+  transition: background-color 0.3s ease-in;
 }
 
 
