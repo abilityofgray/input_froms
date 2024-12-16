@@ -4,18 +4,33 @@
  grid-template-rows: auto;
  row-gap: 60px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .participants_composing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+  }
+}
 .participants {
   
 }
 .participants__list {
   display: flex;
-  gap: 20px;
+  gap: clamp(5px, 1.18%, 20px); 
+  
   grid-area: 2/span 3;
-  height: 462px;
+  min-height: 462px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .participants__list {
+    min-height: 395px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
   
 }
 .participants__wrapper {
-  height: 597px;
+  min-height: 590px;
   overflow: hidden;
 }
 .participants__item
@@ -27,7 +42,20 @@
   width: 32.24%;
   flex-shrink: 0;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .participants__item {
+    width: 100%;
+    
+  }
+}
+.participants__avatar {
 
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .participants__avatar {
+    max-width: 73%;
+  }
+}
 .avatar__participants-item {
   margin-bottom: 28px;
 }
@@ -49,9 +77,18 @@
 .participants__header {
   grid-area: 1/span 2;
 }
-
+@media (min-width: 320px) and (max-width: 767px) {
+  .participants__header {
+    
+  }
+}
 .main__participants {
   margin-bottom: 140px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .main__participants {
+    margin-bottom: 98px;
+  }
 }
 .pagination__counter {
   @extend %golos-text-regular;
@@ -63,11 +100,20 @@
   align-items: center;
   justify-content: end;
   gap: 14px;
-  
   right: 0;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .block__pagination {
+    justify-content: center;
+  }
 }
 .pagination-button__container {
   margin-right: 12px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .pagination-button__container {
+    margin-right: 0px;
+  }
 }
 .btns__arrow {
   display: flex;

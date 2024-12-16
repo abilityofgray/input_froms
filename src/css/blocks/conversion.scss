@@ -96,7 +96,7 @@
 }
 @media (min-width: 375px) and (max-width: 700px) {
   .convertion__item {
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     display: flex;
     max-width: 100%;
@@ -204,7 +204,7 @@
   position: absolute;
   right: -65px;
   bottom: 0px;
-  width: 401px;
+  width:  clamp(337px, 33% ,401px);
   top: auto;
 }
 
@@ -254,9 +254,10 @@
   }
 }
 @media (width <= 767px) {
+
   .convertion__grid-label {
     height: 118px;
-    width: 337px;
+    
   }
   
   .airplane-image {
@@ -264,28 +265,13 @@
     
   }
 }
-@media (width <= 600px) {
-  .airplane-image {
-    background-size: 93%;
-  }
-  
-}
+
 .convertion-item_content-scope {
-  width: 62.63%;
+  padding-right: clamp(150px, 39%, 283px);
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .convertion-item_content-scope {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .convertion-item_content-scope {
-    width: 56.63% ;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .convertion-item_content-scope {
-    width: 60.63% ;
+    padding-right: 20px;
   }
 }
 .convert__pagination {

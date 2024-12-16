@@ -8,71 +8,97 @@ var sliderCurrentElIndex = 0;
 
 
 
-var slidesChunk = document.querySelectorAll('.convertion__item');
+var slidesChunk = sliderConstructor(document.querySelectorAll('.convertion__item'));
 var slidesCatche = [];
-var slidersPack = [];
+var slidersPack = slidesChunk;
 
 
-sliderConstructor();
+
 sliderInit();
+
+disabledPrevButton();
+
 btnPrev.addEventListener('click', () => {
-  
+  enabledButton(btnNext);
   console.log ('btn');
-  if (sliderCurrentElIndex > 0) {
+  
+  if (sliderCurrentElIndex >= 0) {
     sliderCurrentElIndex = sliderCurrentElIndex - 1;
     slideChanger(sliderCurrentElIndex);
     paginationDotsChanger(sliderCurrentElIndex);
+  
   }
+  
+  if (sliderCurrentElIndex == 0) {
+    btnPrev.setAttribute("disabled", "");
+  }
+  disabledPrevButton();
   
 });
 
 btnNext.addEventListener('click', () => {
   
-  if ( sliderCurrentElIndex < slidersPack.length) {
-    sliderCurrentElIndex = ++sliderCurrentElIndex % slidersPack.length;
+  enabledButton(btnPrev);
+  sliderCurrentElIndex = ++sliderCurrentElIndex % slidersPack.length;
+
     
-    slideChanger(sliderCurrentElIndex);
-    paginationDotsChanger(sliderCurrentElIndex);
+  slideChanger(sliderCurrentElIndex);
+  paginationDotsChanger(sliderCurrentElIndex);
+  
+  if (sliderCurrentElIndex == slidersPack.length - 1) {
+    disabledButton(btnNext)
   }
   
 });
-function sliderConstructor () {
 
-  /*
-  let attrChunk = [];
-  for(let i =0; i < slidesChunk.length; i++ ) {
-    if(slidesChunk[i].getAttribute('data-slid') != 'none') {
-      attrChunk.push(slidesChunk[i]);
-      
-    }
-    slidersPack.push(slidesChunk[i]);
+function disabledPrevButton() {
+  if (sliderCurrentElIndex == 0) {
+    disabledButton(btnPrev);
   }
-  console.log(attrChunk);
-  */
+}
 
+function disabledButton(el) {
+  el.setAttribute("disabled", "");
+  el.classList.remove("btns-pagination_hover");
+}
+function enabledButton(el) {
+  el.removeAttribute("disabled");
+  el.classList.add("btns-pagination_hover");
+}
+
+function sliderConstructor(arr) {
+
+  let tempChunk = Array.from(arr);
+  let attrChunk = [];
+  let attrName;
+  for(let i =0; i < tempChunk.length; i++ ) {
+    if(tempChunk[i].getAttribute('data-slid') != 'none' && 
+    tempChunk[i].getAttribute('data-slid') != attrName) {
+      attrName = tempChunk[i].getAttribute('data-slid');
+      let chunk = tempChunk.filter(function (item) {
+        return item.getAttribute('data-slid') == attrName;
+      } );
+      attrChunk .push(chunk);
+      
+      
+    } else if (tempChunk[i].getAttribute('data-slid') != attrName) {
+      attrChunk .push(tempChunk[i]);
+    }
+  }
   
-  slidesCatche = [slidesChunk[0],slidesChunk[1]];
-
-  slidersPack.push(slidesCatche);
-
-  slidersPack.push(slidesChunk[2]);
-
-  slidesCatche = [slidesChunk[3],slidesChunk[4]];
-
-  slidersPack.push(slidesCatche);
-
-  slidersPack.push(slidesChunk[5]);
-  slidersPack.push(slidesChunk[6]);
-  
-  
+  return attrChunk;
   
 }
 
 function slideChanger(index) {
-  
-  slideShow(index);
+  console.log(index);
+  if(index >= 0){
+    slideShow(index);
+  } 
+    
 }
 function slideShow(index) {
+
   slideHide();
   
   if (!Array.isArray(slidersPack[index])) {
@@ -104,13 +130,16 @@ function sliderInit() {
 }
 
 function paginationDotsChanger(index) {
-  pagCounter.forEach((el, index) => {
-    el.classList.remove('convert__pag-dot--active');
-  })
-  try {
-    pagCounter[index].classList.add('convert__pag-dot--active');
+  if (index >= 0) {
+    pagCounter.forEach((el, index) => {
+      el.classList.remove('convert__pag-dot--active');
+    })
+    try {
+      pagCounter[index].classList.add('convert__pag-dot--active');
+    }
+     catch(err){
+      console.log(err);
+    }
   }
-   catch(err){
-    console.log(err);
-   }
+  
 }
